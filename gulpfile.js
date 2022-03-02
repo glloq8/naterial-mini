@@ -9,9 +9,9 @@ var sourcemaps = require("gulp-sourcemaps");
 // Hot reload
 gulp.task("sync", () => {
   browserSync.init({
+    open: false,
     server: {
       index: "index.html",
-      open: false,
     },
   });
 
