@@ -1,0 +1,125 @@
+.nav {
+  border-bottom: 2px solid var(--color-black);
+}
+
+@include down(768) {
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-blue-95);
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    transition: transform 350ms ease-out;
+    transform: translateX(-100%);
+  }
+  .nav ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav li {
+    margin-bottom: space(5);
+    overflow: hidden;
+  }
+  .nav li a {
+    display: flex;
+    font-weight: 300;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-white);
+
+    transition: transform 300ms ease-out;
+  }
+  .nav ul li:nth-child(odd) a {
+    transform: translateX(100%);
+  }
+  .nav ul li:nth-child(even) a {
+    transform: translateX(-100%);
+  }
+
+  body.menu-open {
+    overflow-y: hidden;
+  }
+  .menu-open .nav {
+    transform: translateX(0);
+  }
+  .menu-open .nav ul li a {
+    transform: translateX(0);
+    transition-delay: 150ms;
+  }
+  .nav .menu-close {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--color-white);
+    background: url(../images/menu-close.svg);
+  }
+}
+
+@include up(768) {
+  .nav {
+    margin-bottom: space(5);
+    position: sticky;
+    top: 0;
+    background: var(--color-white);
+    z-index: 10;
+  }
+  .nav ul {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    text-decoration: none;
+    color: var(--color-black);
+    text-transform: uppercase;
+    @include font-size(2);
+    font-weight: 300;
+    transition: color 200ms ease-out;
+
+    &:hover,
+    &.active {
+      color: var(--color-blue);
+    }
+  }
+  .nav li + li a:before {
+    content: "/";
+    margin-inline: space(2);
+    color: var(--color-gray);
+  }
+  .nav ul li:nth-child(5) {
+    margin-left: auto;
+  }
+  .nav ul li:last-child a {
+    background: var(--color-black);
+    color: var(--color-white);
+    padding-inline: space(3);
+    font-weight: 700;
+    transition: background 200ms ease-out;
+
+    &:hover {
+      background: var(--color-blue);
+    }
+
+    &:before {
+      display: none;
+    }
+  }
+}

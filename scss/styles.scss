@@ -1,0 +1,153 @@
+@import "_global";
+
+body {
+  font-family: var(--font-primary);
+  transition: all 500ms ease-out;
+
+  @include up(768) {
+    &:before {
+      content: "";
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      width: 100vw;
+      height: 100vh;
+      background: var(--color-blue);
+      border-radius: 50%;
+      transition: all 400ms ease-out;
+      transform: scale(0);
+      opacity: 0.98;
+    }
+  }
+}
+body.animate {
+  //opacity: 0;
+  overflow-y: hidden;
+
+  &:before {
+    transform: scale(1.5);
+  }
+}
+
+.line {
+  margin-bottom: space(5);
+}
+.line h2 {
+  margin-bottom: space(3);
+}
+.line p {
+  @include font-size(1.4);
+  margin-bottom: space(2);
+  line-height: 1.5;
+
+  @include up(768) {
+    @include font-size(1.6);
+    margin-bottom: space(3);
+  }
+}
+.line p strong {
+  font-weight: 700;
+  color: var(--color-blue);
+}
+.line p a {
+  color: var(--color-blue);
+}
+.line ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+.line ul li {
+  margin-bottom: space(1);
+}
+.line .files {
+  list-style: none;
+  margin-left: 0;
+}
+.line .files a {
+  display: flex;
+  align-items: center;
+  color: var(--color-black);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.line .files a[href$=".pdf"]::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 29px;
+  background: url(../images/icon-pdf.svg) no-repeat;
+  background-size: 100%;
+  margin-right: space(2);
+}
+.line .members {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-left: 0;
+}
+.line .members li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: space(3);
+  border: 1px solid var(--color-gray);
+
+  @include up(768) {
+    width: calc(50% - 8px);
+    margin-left: space(2);
+
+    &:nth-child(2n + 1) {
+      margin-left: 0;
+    }
+  }
+}
+.line .members.others li {
+  @include up(768) {
+    width: calc(33% - 8px);
+
+    &:nth-child(3) {
+      margin-left: space(2);
+    }
+  }
+}
+.line .members li a {
+  display: block;
+  color: var(--color-black);
+  text-decoration: none;
+  padding: space(2);
+}
+.line .members li .flag {
+  width: 32px;
+  margin-bottom: space(1);
+}
+.line .members li .details {
+  flex: 1;
+}
+.line .members li .details p {
+  margin-bottom: 0;
+}
+.line .members li .details .name {
+  color: var(--color-blue);
+  font-weight: 700;
+}
+
+.photo {
+  height: 230px;
+  margin-bottom: space(4);
+
+  @include up(768) {
+    height: 300px;
+    margin-bottom: space(5);
+  }
+}
+.photo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: bottom;
+}

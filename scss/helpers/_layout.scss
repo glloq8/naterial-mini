@@ -1,0 +1,7 @@
+.container {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  padding-left: calc(50% - var(--container-width) / 2);
+  padding-right: calc(50% - var(--container-width) / 2);
+}

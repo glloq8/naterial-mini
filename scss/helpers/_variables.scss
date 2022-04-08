@@ -1,0 +1,21 @@
+:root {
+  /* Colors */
+  --color-black: #000;
+  --color-white: #fff;
+  --color-gray: #e6e6e6;
+  --color-blue: #1fa0ae;
+  --color-blue-95: rgba(31, 160, 174, 0.96);
+
+  /* Width */
+  --container-padding: 20px;
+  --container-width: calc(100vw - var(--container-padding) * 2);
+
+  /* Fonts */
+  --font-primary: "Oswald", sans-serif;
+}
+
+@media only screen and (min-width: 1000px) {
+  :root {
+    --container-width: 980px;
+  }
+}
