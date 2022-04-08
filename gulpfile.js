@@ -10,14 +10,13 @@ var sourcemaps = require("gulp-sourcemaps");
 gulp.task("sync", () => {
   browserSync.init({
     open: false,
-    proxy: "http://utipulp.local",
-    /*server: {
+    server: {
       index: "index.html",
-    },*/
+    },
   });
 
   //Action sur les fichiers HTML
-  gulp.watch("**/*.php").on("change", browserSync.reload);
+  gulp.watch("**/*.html").on("change", browserSync.reload);
 
   gulp.watch("scss/**/*.scss", gulp.series("styles"));
 
