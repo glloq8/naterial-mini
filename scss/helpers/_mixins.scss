@@ -1,0 +1,67 @@
+//
+// mixins
+// --------------------------------------------------
+
+/* Fonction toute prête pour gérer Rem et Pixel en fonction des supports des navigateurs. */
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+%shadow {
+    box-shadow: 0px 1px 17.85px 3.15px rgba(72, 71, 71, 0.15);
+}
+
+%label {
+    display: block;
+}
+
+// Soulignement
+%underlined {
+  background-repeat:no-repeat;
+  background-size: 0 100%;
+  background-position: left 0 bottom .08em;
+  transition: background-size .3s;
+  background-image: linear-gradient(transparent calc(100% - 2px), #000 100%);
+
+  &:hover,
+  &.active {
+      background-size:100% 100%;
+  }
+}
+
+// Espacement
+$space: 8px;
+$gap : 8px;
+
+:root {
+    --gap: #{$gap}; //Variable CSS
+}
+
+@function space($i) {
+    @return calc(var(--gap) * #{$i});
+}
+
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// Responsive
+@mixin up($size) {
+  $size: strip-unit($size);
+  @media (min-width: $size * 1px) { @content; }
+}
+@mixin down($size) {
+  $size: strip-unit($size);
+  @media (max-width: $size * 1px) { @content; }
+}
+@mixin between($down, $up) {
+  $down: strip-unit($down);
+  $up: strip-unit($up);
+  @media (min-width: $down * 1px) and (max-width: $up * 1px) { @content; }
+}
