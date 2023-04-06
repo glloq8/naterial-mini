@@ -1,18 +1,2226 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="de" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#b6c1b3">
 
     <title>Document</title>
 
     <link rel="stylesheet" href="css/styles.css" />
 
-    <script defer="" src="js/main.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/theme.min.js"></script>
+    <script type="text/javascript" src="js/yannick.js"></script>
+    <script type="text/javascript" src="js/Antoine.js"></script>
+    <script type="text/javascript" src="js/slick-carousel.js"></script>
+
+    <link rel="shortcut icon" href="images/Logo_Favicon_Naterial_32x32.png" type="image/png" />
   </head>
 
   <body>
-  
+    <div class="toolbar">
+      <div class="page-width">
+        <div class="toolbar__content">
+          <div class="toolbar__item toolbar__item--announcements">
+            <div class="announcement-bar" style="calc(100% - 200px)">
+              <div class="slideshow-wrapper">
+                <button type="button" class="visually-hidden slideshow__pause" data-id="toolbar" aria-live="polite">
+                  <span class="slideshow__pause-stop">
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-pause"
+                      viewBox="0 0 10 13"
+                    >
+                      <g fill="#000" fill-rule="evenodd"><path d="M0 0h3v13H0zM7 0h3v13H7z"></path></g>
+                    </svg>
+                    <span class="icon__fallback-text">Pause Diashow</span>
+                  </span>
+                  <span class="slideshow__pause-play">
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-play"
+                      viewBox="18.24 17.35 24.52 28.3"
+                    >
+                      <path fill="#323232" d="M22.1 19.151v25.5l20.4-13.489-20.4-12.011z"></path>
+                    </svg>
+                    <span class="icon__fallback-text">Diashow abspielen</span>
+                  </span>
+                </button>
+
+                <div
+                  id="AnnouncementSlider"
+                  class="announcement-slider flickity-enabled is-fade"
+                  data-block-count="1"
+                  tabindex="0"
+                >
+                  <div class="flickity-viewport" style="height: 24px; touch-action: pan-y">
+                    <div class="flickity-slider" style="left: 0px; transform: translateX(0%)">
+                      <div
+                        id="AnnouncementSlide-4aff1a01-d872-4f84-9700-f5508f06d5a6"
+                        class="slideshow__slide announcement-slider__slide is-selected"
+                        data-index="0"
+                        style="position: absolute; left: 0%"
+                      >
+                        <div class="announcement-slider__content">
+                          <div class="medium-up--hide">
+                            <p>Kostenloser Versand und Retoure innerhalb von 14 Tagen</p>
+                          </div>
+                          <div class="small--hide">
+                            <p>Kostenloser Versand und Retoure innerhalb von 14 Tagen</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    class="flickity-button flickity-prev-next-button flickity-previous"
+                    type="button"
+                    disabled=""
+                    aria-label="Previous"
+                  >
+                    <svg class="flickity-button-icon" viewBox="0 0 100 100">
+                      <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                    </svg></button
+                  ><button
+                    class="flickity-button flickity-prev-next-button flickity-next"
+                    type="button"
+                    disabled=""
+                    aria-label="Next"
+                  >
+                    <svg class="flickity-button-icon" viewBox="0 0 100 100">
+                      <path
+                        d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
+                        class="arrow"
+                        transform="translate(100, 100) rotate(180) "
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="header-help">
+            <a href=""> Help center </a>
+          </div> -->
+            <div class="header-swicth-language">
+              <select
+                class=""
+                id="select_lang_mobile"
+                onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);"
+              ></select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shopify-section header-section">
+      <style>
+        .site-nav__link {
+          font-size: 15px;
+        }
+
+        .site-header,
+        .site-header__element--sub {
+          box-shadow: 0 0 25px rgb(0 0 0 / 10%);
+        }
+      </style>
+
+      <div data-section-id="header" data-section-type="header">
+        <div id="HeaderWrapper" class="header-wrapper header-wrapper--init">
+          <header
+            id="SiteHeader"
+            class="site-header site-header--heading-style"
+            data-sticky="true"
+            data-overlay="false"
+          >
+            <div class="site-header__element site-header__element--top">
+              <div class="page-width">
+                <div class="header-layout" data-layout="below" data-nav="below" data-logo-align="left">
+                  <div class="header-item header-item--compress-nav small--hide">
+                    <button type="button" class="site-nav__link site-nav__link--icon site-nav__compress-menu">
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        role="presentation"
+                        class="icon icon-hamburger"
+                        viewBox="0 0 64 64"
+                      >
+                        <path class="cls-1" d="M7 15h51">.</path>
+                        <path class="cls-1" d="M7 32h43">.</path>
+                        <path class="cls-1" d="M7 49h51">.</path>
+                      </svg>
+                      <span class="icon__fallback-text">Seitennavigation</span>
+                    </button>
+                  </div>
+                  <div class="header-item header-item--logo">
+                    <button
+                      type="button"
+                      aria-controls="MobileNav"
+                      class="site-nav__link site-nav__link--icon medium-up--hide mobile-nav-trigger"
+                    >
+                      <input
+                        type="image"
+                        id="image"
+                        class="open-trigger"
+                        alt="Login"
+                        src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/Colormenu2.png?v=1638896166"
+                      />
+                      <input
+                        type="image"
+                        id="image"
+                        class="close-trigger"
+                        alt="Login"
+                        src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/close-cross.svg"
+                      />
+                      <span class="icon__fallback-text">Seitennavigation</span></button
+                    ><style data-shopify="">
+                      .header-item--logo,
+                      [data-layout="left-center"] .header-item--logo,
+                      [data-layout="left-center"] .header-item--icons {
+                        flex: 0 1 140px;
+                      }
+
+                      @media only screen and (min-width: 769px) {
+                        .header-item--logo,
+                        [data-layout="left-center"] .header-item--logo,
+                        [data-layout="left-center"] .header-item--icons {
+                          flex: 0 0 400px;
+                        }
+                      }
+
+                      .site-header__logo a {
+                        width: 140px;
+                      }
+                      .is-light .site-header__logo .logo--inverted {
+                        width: 140px;
+                      }
+                      @media only screen and (min-width: 769px) {
+                        .site-header__logo a {
+                          width: 400px;
+                        }
+
+                        .is-light .site-header__logo .logo--inverted {
+                          width: 400px;
+                        }
+                      }
+                    </style>
+                    <h1 class="site-header__logo">
+                      <span class="visually-hidden">Naterial.de</span>
+
+                      <a href="/" class="site-header__logo-link">
+                        <img
+                          class="small--hide"
+                          src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Naterial_Carmen_400x.png?v=1678088695"
+                          srcset="
+                            //cdn.shopify.com/s/files/1/0603/2677/2912/files/Naterial_Carmen_400x.png?v=1678088695    1x,
+                            //cdn.shopify.com/s/files/1/0603/2677/2912/files/Naterial_Carmen_400x@2x.png?v=1678088695 2x
+                          "
+                          alt="Naterial.de"
+                        />
+                        <img
+                          class="medium-up--hide"
+                          src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Naterial_Carmen_140x.png?v=1678088695"
+                          srcset="
+                            //cdn.shopify.com/s/files/1/0603/2677/2912/files/Naterial_Carmen_140x.png?v=1678088695    1x,
+                            //cdn.shopify.com/s/files/1/0603/2677/2912/files/Naterial_Carmen_140x@2x.png?v=1678088695 2x
+                          "
+                          alt="Naterial.de"
+                        />
+                      </a>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="site-header__element site-header__element--sub" data-type="nav">
+              <div class="page-width">
+                <ul class="site-nav site-navigation site-navigation--below small--hide" role="navigation">
+                  <li class="site-nav__item site-nav__expanded-item">
+                    <a href="/pages/uber-naterial" class="site-nav__link site-nav__link--underline">About Naterial</a>
+                  </li>
+                  <li class="site-nav__item site-nav__expanded-item site-nav--has-dropdown" aria-haspopup="true">
+                    <a href="#" class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown">Collections</a>
+                    <div class="site-nav__dropdown">
+                      <div class="page-width">
+                        <ul class="site-nav__dropdown-animate site-nav__dropdown-list text-left">
+                          <li class="">
+                            <a
+                              href="/collections/gartentische"
+                              class="site-nav__dropdown-link site-nav__dropdown-link--second-level"
+                            >
+                              Gartentische
+                            </a>
+                          </li>
+                          <li class="">
+                            <a
+                              href="/collections/gartenstuhle"
+                              class="site-nav__dropdown-link site-nav__dropdown-link--second-level"
+                            >
+                              Gartenstühle
+                            </a>
+                          </li>
+                          <li class="">
+                            <a
+                              href="/collections/gartenstuhle-mit-armlehnen"
+                              class="site-nav__dropdown-link site-nav__dropdown-link--second-level"
+                            >
+                              Gartenstühle mit Armlehnen
+                            </a>
+                          </li>
+                          <li class="">
+                            <a
+                              href="/collections/esstischgarnituren"
+                              class="site-nav__dropdown-link site-nav__dropdown-link--second-level"
+                            >
+                              Esstischgarnituren
+                            </a>
+                          </li>
+                        </ul>
+
+                        <div class="menu_picture_large only-large">
+                          <a href="">
+                            <img
+                              class="img_link"
+                              src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Para_Comer_y_recibir_Grande_8837b904-e13d-4f1b-ac3d-06370a2bc6f8_1024x1024.jpg?v=1678088941"
+                            />
+                            <div class="header__link_picture">
+                              Siehe Produkte
+                              <img
+                                src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                              />
+                            </div>
+                          </a>
+                        </div>
+                        <div class="menu_picture_small only-large">
+                          <a href="">
+                            <img
+                              class="img_link"
+                              src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_eat_and_host_short_DE_e11a6bb5-fce3-4acf-a02d-fd33e2b858cd_1024x1024.jpg?v=1678290296"
+                            />
+                            <div class="header__link_picture">
+                              Siehe Produkte
+                              <img
+                                src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                              />
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="site-nav__item site-nav__expanded-item site-nav--has-dropdown" aria-haspopup="true">
+                    <a href="#" class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown">Styles</a>
+                  </li>
+                  <li class="site-nav__item site-nav__expanded-item site-nav--has-dropdown" aria-haspopup="true">
+                    <a href="#" class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="page-width site-header__drawers">
+              <div class="site-header__drawers-container">
+                <div class="site-header__drawer site-header__cart" id="HeaderCart">
+                  <div class="site-header__drawer-animate is-empty">
+                    <form action="/cart" method="post" novalidate="" data-location="header" class="cart__drawer-form">
+                      <div class="site-nav__close-cart">
+                        <button
+                          type="button"
+                          id="fermeturePanier"
+                          class="site-nav__link site-nav__link--icon js-close-header-cart"
+                        >
+                          X
+                        </button>
+                      </div>
+                      <div class="cart__scrollable">
+                        <div data-products="">
+                          <div class="cart__items" data-count="0" data-cart-subtotal="0"></div>
+                        </div>
+                      </div>
+
+                      <div class="cart__footer">
+                        <div class="cart__item-sub cart__item-row cart__item--subtotal">
+                          <div>Zwischensumme</div>
+                          <div data-subtotal="">0,00€</div>
+                        </div>
+
+                        <div data-discounts="">
+                          <div class="cart__discounts text-right hide">
+                            <div></div>
+                          </div>
+                        </div>
+
+                        <div class="cart__item-row cart__checkout-wrapper payment-buttons">
+                          <button type="submit" name="checkout" data-terms-required="false" class="btn cart__checkout">
+                            Zur Kasse
+                          </button>
+                        </div>
+
+                        <div class="cart__item-row--footer text-center">
+                          <small>Rabattcodes, Versandkosten und Steuern werden bei der Bezahlung berechnet.</small>
+                        </div>
+                      </div>
+                    </form>
+
+                    <div class="site-header__cart-empty">Ihr Einkaufswagen ist im Moment leer.</div>
+                  </div>
+                </div>
+
+                <div class="site-header__drawer site-header__mobile-nav medium-up--hide" id="MobileNav">
+                  <div class="site-header__drawer-animate">
+                    <div class="slide-nav__wrapper" data-level="1">
+                      <ul class="slide-nav">
+                        <li class="slide-nav__item">
+                          <a href="/pages/uber-naterial" class="slide-nav__link slide-nav__link-new"
+                            ><span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                fill="none"
+                                style="width: 25px; margin-bottom: -5px; margin-right: 10px"
+                              >
+                                <g clip-path="url(#a)">
+                                  <path
+                                    fill="#EA6062"
+                                    d="M17.3005.124023H5.42488V2.67389H17.3005c2.2202 0 4.0257 1.80553 4.0257 4.02568v9.32583H18.576v-4.0247c0-.2271-.0119-.4502-.0336-.6713-.3376-3.31195-3.1422-5.90427-6.541-5.90427H5.42587v6.57557c0 3.6259 2.94966 6.5745 6.57553 6.5745h4.0257v2.7503H2.67462V5.42513H.124756V23.8764H18.575v-5.3002h5.3001V6.70056c0-3.62588-2.9497-6.575548-6.5755-6.575548l.0009-.000989ZM12.0004 16.0254c-2.21914 0-4.02566-1.8056-4.02566-4.0247V7.975h4.02566c2.2192 0 4.0257 1.80652 4.0257 4.0257v4.0247h-4.0257Z"
+                                  ></path>
+                                </g>
+                                <defs>
+                                  <clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"></path></clipPath>
+                                </defs>
+                              </svg>
+                              <!--<img src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/Path.png?v=1639037197" style="width:25px; margin-bottom:-5px; margin-right:10px" />-->
+
+                              Über Naterial
+                            </span>
+                          </a>
+                        </li>
+                        <li class="slide-nav__item">
+                          <button
+                            type="button"
+                            class="slide-nav__button js-toggle-submenu"
+                            data-target="essen-und-bewirten2"
+                          >
+                            <span class="slide-nav__link"
+                              ><span>
+                                <img
+                                  class="logo_img_collection"
+                                  src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/table.svg?v=1649767189"
+                                />
+                                <!--<img src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/Color.png?v=1639037441" style="width:25px; margin-bottom:-5px; margin-right:10px" />-->
+
+                                Essen und bewirten</span
+                              >
+
+                              <span class="icon__fallback-text">Menü maximieren</span>
+                            </span>
+                          </button>
+
+                          <ul class="slide-nav__dropdown" data-parent="essen-und-bewirten2" data-level="2">
+                            <li class="slide-nav__item">
+                              <button type="button" class="slide-nav__button js-toggle-submenu">
+                                <span class="slide-nav__link slide-nav__link--back">
+                                  <img
+                                    src="//cdn.shopify.com/s/files/1/0558/6629/4445/t/9/assets/arrow_next.svg?v=5783516265191383676"
+                                    style="transform: rotate(180deg)"
+                                  />
+
+                                  &nbsp; Zurück
+                                </span>
+                                <span class="title_menu_mobile_collection">Essen und bewirten</span><br /><br />
+                              </button>
+                            </li>
+
+                            <li class="slide-nav__item">
+                              <a href="/collections/gartentische" class="slide-nav__link">
+                                <span>Gartentische</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/gartenstuhle" class="slide-nav__link">
+                                <span>Gartenstühle</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/gartenstuhle-mit-armlehnen" class="slide-nav__link">
+                                <span>Gartenstühle mit Armlehnen</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/esstischgarnituren" class="slide-nav__link">
+                                <span>Esstischgarnituren</span>
+                              </a>
+                            </li>
+                            <div class="sub-menu-mobile" style="padding: 20px">
+                              <div class="menu_picture_large" style="padding-bottom: 10px">
+                                <a href="">
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Para_Comer_y_recibir_Grande_8837b904-e13d-4f1b-ac3d-06370a2bc6f8_1024x1024.jpg?v=1678088941"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="menu_picture_small">
+                                <a href="">
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_eat_and_host_short_DE_e11a6bb5-fce3-4acf-a02d-fd33e2b858cd_1024x1024.jpg?v=1678290296"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div style="clear: both"></div>
+                          </ul>
+                        </li>
+                        <li class="slide-nav__item">
+                          <button type="button" class="slide-nav__button js-toggle-submenu" data-target="sich-erholen3">
+                            <span class="slide-nav__link"
+                              ><span>
+                                <img
+                                  class="logo_img_collection"
+                                  src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/fauteuil.svg?v=1649767189"
+                                />
+                                <!--<img src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/Group_21.png?v=1639037860" style="width:25px; margin-bottom:-5px; margin-right:10px" />-->
+
+                                Sich erholen</span
+                              >
+
+                              <span class="icon__fallback-text">Menü maximieren</span>
+                            </span>
+                          </button>
+
+                          <ul class="slide-nav__dropdown" data-parent="sich-erholen3" data-level="2">
+                            <li class="slide-nav__item">
+                              <button type="button" class="slide-nav__button js-toggle-submenu">
+                                <span class="slide-nav__link slide-nav__link--back">
+                                  <img
+                                    src="//cdn.shopify.com/s/files/1/0558/6629/4445/t/9/assets/arrow_next.svg?v=5783516265191383676"
+                                    style="transform: rotate(180deg)"
+                                  />
+
+                                  &nbsp; Zurück
+                                </span>
+                                <span class="title_menu_mobile_collection">Sich erholen</span><br /><br />
+                              </button>
+                            </li>
+
+                            <li class="slide-nav__item">
+                              <a href="/collections/sessel-und-hocker" class="slide-nav__link">
+                                <span>Sessel und Hocker</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/loungegarnituren" class="slide-nav__link">
+                                <span>Loungegarnituren</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/sonnenliegen" class="slide-nav__link">
+                                <span>Sonnenliegen</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/gartenschaukeln-sitzgelegenheiten" class="slide-nav__link">
+                                <span>Gartenschaukeln &amp; Sitzgelegenheiten</span>
+                              </a>
+                            </li>
+                            <div class="sub-menu-mobile" style="padding: 20px">
+                              <div class="menu_picture_large" style="padding-bottom: 10px">
+                                <a
+                                  href="/products/set-5p-naterial-medena-sofa-3p-2-ac-1-table-60x100-wicker-alu-natural"
+                                >
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_lounge_large_DE_85d4f010-ff94-4d81-a17e-46a26274a2c9_1024x1024.jpg?v=1678088941"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="menu_picture_small">
+                                <a
+                                  href="/products/swingchair-3p-naterial-odyssea-sliding-roof-steel-spunpoly220g-dgrey"
+                                >
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_lounge_DE_aaa6f18e-8f7c-470d-9773-6a2f15b3102e_1024x1024.jpg?v=1678290413"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div style="clear: both"></div>
+                          </ul>
+                        </li>
+                        <li class="slide-nav__item">
+                          <button
+                            type="button"
+                            class="slide-nav__button js-toggle-submenu"
+                            data-target="schatten-spenden4"
+                          >
+                            <span class="slide-nav__link"
+                              ><span>
+                                <img
+                                  class="logo_img_collection"
+                                  src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/transat.svg?v=1649767189"
+                                />
+                                <!--<img src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/Group_19.png?v=1639037860" style="width:25px; margin-bottom:-5px; margin-right:10px" />-->
+
+                                Schatten spenden</span
+                              >
+
+                              <span class="icon__fallback-text">Menü maximieren</span>
+                            </span>
+                          </button>
+
+                          <ul class="slide-nav__dropdown" data-parent="schatten-spenden4" data-level="2">
+                            <li class="slide-nav__item">
+                              <button type="button" class="slide-nav__button js-toggle-submenu">
+                                <span class="slide-nav__link slide-nav__link--back">
+                                  <img
+                                    src="//cdn.shopify.com/s/files/1/0558/6629/4445/t/9/assets/arrow_next.svg?v=5783516265191383676"
+                                    style="transform: rotate(180deg)"
+                                  />
+
+                                  &nbsp; Zurück
+                                </span>
+                                <span class="title_menu_mobile_collection">Schatten spenden</span><br /><br />
+                              </button>
+                            </li>
+
+                            <li class="slide-nav__item">
+                              <a href="/collections/pergolen" class="slide-nav__link">
+                                <span>Pergolen</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/sonnenschirme" class="slide-nav__link">
+                                <span>Sonnenschirme</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/pavillons" class="slide-nav__link">
+                                <span>Pavillons</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/sonnensegel" class="slide-nav__link">
+                                <span>Sonnensegel</span>
+                              </a>
+                            </li>
+                            <div class="sub-menu-mobile" style="padding: 20px">
+                              <div class="menu_picture_large" style="padding-bottom: 10px">
+                                <a
+                                  href="/products/pergola-naterial-persea-easy-full-alu-modular-roof-320x360-dark-grey"
+                                >
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_shade_large_DE_1024x1024.jpg?v=1646149972"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="menu_picture_small">
+                                <a href="/products/side-umb-naterial-avea-alu-360-hexa-d290-200g-dark-grey-shadow">
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_shade_short_DE_1024x1024.jpg?v=1648715375"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div style="clear: both"></div>
+                          </ul>
+                        </li>
+                        <li class="slide-nav__item">
+                          <button type="button" class="slide-nav__button js-toggle-submenu" data-target="zubehor5">
+                            <span class="slide-nav__link"
+                              ><span>
+                                <img
+                                  class="logo_img_collection"
+                                  src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/parasol.svg?v=1649767189"
+                                />
+
+                                <!--<img src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/24px.png?v=1639037860" style="width:25px; margin-bottom:-5px; margin-right:10px" />-->
+
+                                Zubehör</span
+                              >
+
+                              <span class="icon__fallback-text">Menü maximieren</span>
+                            </span>
+                          </button>
+
+                          <ul class="slide-nav__dropdown" data-parent="zubehor5" data-level="2">
+                            <li class="slide-nav__item">
+                              <button type="button" class="slide-nav__button js-toggle-submenu">
+                                <span class="slide-nav__link slide-nav__link--back">
+                                  <img
+                                    src="//cdn.shopify.com/s/files/1/0558/6629/4445/t/9/assets/arrow_next.svg?v=5783516265191383676"
+                                    style="transform: rotate(180deg)"
+                                  />
+
+                                  &nbsp; Zurück
+                                </span>
+                                <span class="title_menu_mobile_collection">Zubehör</span><br /><br />
+                              </button>
+                            </li>
+
+                            <li class="slide-nav__item">
+                              <a href="/collections/schutzhullen" class="slide-nav__link">
+                                <span>Schutzhüllen</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/kissenbox-beistelltische" class="slide-nav__link">
+                                <span>Zubehör</span>
+                              </a>
+                            </li>
+                            <div class="sub-menu-mobile" style="padding: 20px">
+                              <div class="menu_picture_large" style="padding-bottom: 10px">
+                                <a href="/products/side-table-naterial-mobis-tray-function-full-steel-d45x53-dark-grey">
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_accessories_large_9e855520-7e84-4da1-8773-9a2210b41680_1024x1024.jpg?v=1678290537"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="menu_picture_small">
+                                <a href="/products/cover-for-rect-table-l-naterial-prisma-poly160g-200x130x60-lgrey">
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_accessories_short_DE_e544ed35-c61e-4260-94ec-c74ec62bddc3_1024x1024.jpg?v=1678290549"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div style="clear: both"></div>
+                          </ul>
+                        </li>
+                        <li class="slide-nav__item">
+                          <button
+                            type="button"
+                            class="slide-nav__button js-toggle-submenu"
+                            data-target="essen-zubereiten6"
+                          >
+                            <span class="slide-nav__link"
+                              ><span>
+                                <img
+                                  class="logo_img_collection"
+                                  src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/oreiller.svg?v=1649767189"
+                                />
+
+                                <!--<img src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/Group_5.png?v=1639037861" style="width:25px; margin-bottom:-5px; margin-right:10px" />-->
+
+                                Essen zubereiten</span
+                              >
+
+                              <span class="icon__fallback-text">Menü maximieren</span>
+                            </span>
+                          </button>
+
+                          <ul class="slide-nav__dropdown" data-parent="essen-zubereiten6" data-level="2">
+                            <li class="slide-nav__item">
+                              <button type="button" class="slide-nav__button js-toggle-submenu">
+                                <span class="slide-nav__link slide-nav__link--back">
+                                  <img
+                                    src="//cdn.shopify.com/s/files/1/0558/6629/4445/t/9/assets/arrow_next.svg?v=5783516265191383676"
+                                    style="transform: rotate(180deg)"
+                                  />
+
+                                  &nbsp; Zurück
+                                </span>
+                                <span class="title_menu_mobile_collection">Essen zubereiten</span><br /><br />
+                              </button>
+                            </li>
+
+                            <li class="slide-nav__item">
+                              <a href="/collections/grillen" class="slide-nav__link">
+                                <span>Grillen</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/grillen-schutzhullen" class="slide-nav__link">
+                                <span>Schutzhüllen</span>
+                              </a>
+                            </li>
+                            <div class="sub-menu-mobile" style="padding: 20px">
+                              <div class="menu_picture_large" style="padding-bottom: 10px">
+                                <a href="/products/bbq-naterial-centaurus-beta-trolley-1-grate-mwc-61x46">
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_cook_large_DE_36dcc137-ad05-44c4-b985-6d3f84a51907_1024x1024.jpg?v=1648545498"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="menu_picture_small">
+                                <a href="/products/cover-for-bbq-gaz-xl-naterial-prisma-poly160g-148x57x97-light-grey">
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_cook_short_DE_b683f2e5-25e1-4ef1-ae4f-43df8e2a1057_1024x1024.jpg?v=1648545519"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div style="clear: both"></div>
+                          </ul>
+                        </li>
+                        <li class="slide-nav__item">
+                          <button
+                            type="button"
+                            class="slide-nav__button js-toggle-submenu"
+                            data-target="unsere-kollektion7"
+                            data-active="true"
+                          >
+                            <span class="slide-nav__link"
+                              ><span>
+                                <img
+                                  class="logo_img_collection"
+                                  src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/barbecue.svg?v=1649767189"
+                                />
+                                <!--<img src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/Group.png?v=1639037860" style="width:25px; margin-bottom:-5px; margin-right:10px" />-->
+
+                                Unsere Kollektion</span
+                              >
+
+                              <span class="icon__fallback-text">Menü maximieren</span>
+                            </span>
+                          </button>
+
+                          <ul class="slide-nav__dropdown" data-parent="unsere-kollektion7" data-level="2">
+                            <li class="slide-nav__item">
+                              <button type="button" class="slide-nav__button js-toggle-submenu">
+                                <span class="slide-nav__link slide-nav__link--back">
+                                  <img
+                                    src="//cdn.shopify.com/s/files/1/0558/6629/4445/t/9/assets/arrow_next.svg?v=5783516265191383676"
+                                    style="transform: rotate(180deg)"
+                                  />
+
+                                  &nbsp; Zurück
+                                </span>
+                                <span class="title_menu_mobile_collection">Unsere Kollektion</span><br /><br />
+                              </button>
+                            </li>
+
+                            <li class="slide-nav__item">
+                              <a href="/collections/kollektion-medena" class="slide-nav__link">
+                                <span>Kollektion Medena</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/kollektion-san-diego" class="slide-nav__link">
+                                <span>Kollektion San Diego</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/kollektion-oris" class="slide-nav__link">
+                                <span>Kollektion Oris</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/kollektion-odyssea-ii" class="slide-nav__link">
+                                <span>Kollektion Odyssea II</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/kollektion-solis" class="slide-nav__link">
+                                <span>Kollektion Solis</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/" class="slide-nav__link">
+                                <span>Kollektion Menorca</span>
+                              </a>
+                            </li>
+                            <div class="sub-menu-mobile" style="padding: 20px">
+                              <div class="menu_picture_large" style="padding-bottom: 10px">
+                                <a href="/collections/kollektion-odyssea-ii">
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Para_descansar_Imagen_grande_6a9ee5f5-633d-41ed-9637-38764a3b0c66_1024x1024.jpg?v=1678088941"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="menu_picture_small">
+                                <a href="">
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Kollektion_Menorca_1024x1024.jpg?v=1678868191"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div style="clear: both"></div>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- <div id="MobileNavFooter"></div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+
+    <div class="shopify-section index-section--hero">
+      <style>
+        .slideshow-home .slide {
+          position: relative;
+        }
+        .slideshow-home .photo {
+          margin-bottom: 0;
+        }
+        .slideshow-home .content {
+          position: absolute;
+          inset: 0;
+          z-index: 1;
+        }
+        .slideshow-home .slider-link {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+        }
+        .slideshow-home .content a {
+          color: #fff;
+        }
+        .slideshow-home .content .slider-title {
+          font-weight: 600;
+          font-size: 36px;
+          line-height: 43px;
+          margin-bottom: 21px;
+          font-family: var(--typeBasePrimary);
+          text-shadow: 0 0 40px rgba(0, 0, 0, 0.35);
+          text-align: center;
+        }
+        .slideshow-home .content .slider-subtitle {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 22px;
+          font-family: var(--typeBaseTitle);
+          margin-bottom: 20px;
+          text-shadow: 0 0 40px rgba(0, 0, 0, 0.35);
+          text-align: center;
+        }
+        .slideshow-home .content .slider-action {
+          width: 100%;
+          padding-inline: 40px;
+        }
+        .slideshow-home .content a {
+          padding-inline: 40px;
+        }
+        .slideshow-home .content .slider-action span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: var(--colorRed);
+          color: #fff;
+          border: 2px solid var(--colorRed);
+          transition: 350ms ease-out;
+          width: 100%;
+          height: 56px;
+          padding: 0;
+          font-size: 18px;
+        }
+        .slideshow-home .content a .slider-action span:hover,
+        .slideshow-home .content a .slider-action span:focus,
+        .slideshow-home .content a .slider-action span:focus-within,
+        .slideshow-home .content a .slider-action span:active {
+          background: #fff;
+          color: var(--colorRed);
+        }
+        .slideshow-home .slick-prev,
+        .slideshow-home .slick-next {
+          top: 100%;
+          background-color: #fff;
+          border-radius: 50%;
+          background-size: 50%;
+        }
+        .slideshow-home .slick-prev {
+          left: calc(100% - 85px);
+        }
+        .slideshow-home .slick-next {
+          right: 16px;
+        }
+
+        @media(max-width: 768px) {
+          .slideshow-home .slick-prev,
+          .slideshow-home .slick-next {
+            width: 32px;
+            height: 32px;
+          }
+        }
+
+        @media(min-width: 850px) {
+          .slideshow-home .content .slider-title {
+            font-size: 64px;
+            line-height: 77px;
+            margin-bottom: 18px;
+          }
+          .slideshow-home .content .slider-subtitle {
+            font-weight: 400;
+            font-size: 34px;
+            line-height: 41px;
+            margin-bottom: 32px;
+          }
+          .slideshow-home .content .slider-action {
+            width: max-content;
+            padding: 0;
+          }
+          .slideshow-home .content .slider-action span {
+            min-width: 260px;
+            height: 56px;
+            padding: 0;
+          }
+          .slideshow-home .slick-prev,
+          .slideshow-home .slick-next {
+            margin-top: -24px;
+            transition: 250ms ease-out;
+            filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.2));
+          }
+          .slideshow-home .slick-prev svg,
+          .slideshow-home .slick-next svg {
+            display: none;
+          }
+          .slideshow-home .slick-prev {
+            left: 50%;
+            transform: translateX(-72px);
+            background: #fff url("//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/home-slider-left.svg") center no-repeat;
+          }
+          .slideshow-home .slick-next {
+            left: 50%;
+            transform: rotate(0);
+            background: #fff url("//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/home-slider-right.svg") center no-repeat;
+          }
+          .slideshow-home .slick-prev:hover,
+          .slideshow-home .slick-next:hover {
+            background-color: #f3f3f3;
+          }
+        }
+
+        @media(min-width:768px) and (max-width:1179px) {
+          .slideshow-home .content .slider-action {
+            display: flex;
+            justify-content: center;
+          }
+          .slideshow-home .content .slider-action span {
+            display: inline-flex;
+            width: max-content;
+            min-width: 300px;
+          }
+          .slideshow-home .photo .mobile-image {
+            display: none !important;
+          }
+          .slideshow-home .photo img.small--hide {
+            display: block !important;
+          }
+          .slideshow-home .slick-prev {
+            left: calc(100% - 120px);
+          }
+          .slideshow-home .content .slider-title {
+            font-size: 50px;
+          }
+        }
+      </style>
+      <div class="slideshow-home">
+        <div>
+          <p class="photo"><img class="hero__image hero__image--f612cc7e-06c9-4ced-886b-4ccb840b6e06 medium-up--hide mobile-image" src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/San_Diego_Mobile_900x.jpg?v=1680527866" data-src="" data-aspectratio="0.6648936170212766" data-sizes="auto" alt="" style="object-position: center center"><img class="hero__image hero__image--f612cc7e-06c9-4ced-886b-4ccb840b6e06 small--hide" src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/San_Diego_Desktop_1900x.jpg?v=1680526511" data-src="" data-aspectratio="1.945945945945946" data-sizes="auto" alt="" style="object-position: center center">
+          </p>
+
+          <div class="content">
+            <a href="/collections/kollektion-san-diego" class="slider-link" aria-hidden="true" tabindex="0">
+              <h2 class="slider-title"><p>Gemütlichen Atmosphäre </p></h2>
+              <div class="slider-subtitle">Kollektion San Diego - Organische Formen</div>
+              <div class="slider-action">
+                <span class="btn">Zeig mehr</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="photo"><img class="hero__image hero__image--5b898361-17bf-4a5c-bae7-d3c9f1ecdb54 medium-up--hide mobile-image" src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Odyssea_Mobile_900x.jpg?v=1680528826" data-src="" data-aspectratio="0.6648936170212766" data-sizes="auto" alt="" style="object-position: center center"><img class="hero__image hero__image--5b898361-17bf-4a5c-bae7-d3c9f1ecdb54 small--hide" src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Odyssea_Collection_Desktop_1900x.jpg?v=1680528807" data-src="" data-aspectratio="1.945945945945946" data-sizes="auto" alt="" style="object-position: center center">
+          </p>
+          <div class="content">
+            <a href="/collections/kollektion-odyssea-ii" class="slider-link" aria-hidden="true" tabindex="-1">
+              <h2 class="slider-title"><p>Zeit Ihre Outdoor Produkte zu geniessen</p></h2>
+              <div class="slider-subtitle">Kollektion Odyssea - Bequemlichkeit mit Stil</div>
+              <div class="slider-action"><span class="btn">Zeig mehr</span></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const autoplaySpeed = 7000
+        jQuery(document).ready(function() {
+          jQuery('.slideshow-home').slick({
+            infinite: true,
+            // autoplay: true,
+            autoplaySpeed: autoplaySpeed,
+            fade: true,
+            cssEase: 'linear'
+          });
+        });
+      </script>
+    </div>
+
+    <div class="shopify-section index-section">
+      <div data-section-type="collection-template">
+          <div class="page-width">
+              <div class="section-header section-header--with-link">
+                  <h2 class="section-header__title">Der Komfort im Freien</h2>
+                  <a href="/collections/loungegarnituren" class="section-header__link">Alle <img src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198" /></a>
+              </div>
+          </div>
+          <div class="page-width">
+              <div class="new-grid product-grid" data-view="medium">
+                  <div style="width: 100%;">
+                      <div class="col-item slick-slider">
+                        <div>
+                            <div class="grid-item grid-product" data-product-handle="sofa-set-naterial-ares-5p-sofa3p2ac1tbl-alu-kd-textilene-beige" data-product-id="7313930191024">
+                                <div class="grid-item__content">
+                                    <a href="/collections/loungegarnituren/products/sofa-set-naterial-ares-5p-sofa3p2ac1tbl-alu-kd-textilene-beige" class="grid-item__link" data-ezsd-touch="false" data-ezsd="false" tabindex="0">
+                                        <div class="grid-product__image-wrap">
+                                            <div class="grid-product__tag grid-product__tag--sold-out">
+                                                Ausverkauft
+                                            </div>
+                                            <div class="grid__image-ratio grid__image-ratio--square">
+                                                <img
+                                                    class="lazyautosizes lazyloaded"
+                                                    data-widths="[160, 200, 280, 360, 540, 720, 900]"
+                                                    data-aspectratio="1.0"
+                                                    data-sizes="auto"
+                                                    alt="Loungegarnitur Ares , 5 Personen : 1 Sofa + 2 Gartensessel + 1 Loungetisch"
+                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                    data-srcset="//cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_a2a7892b-27e6-4054-abfe-6d374cdf48cb_160x.jpg?v=1678873366 160w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_a2a7892b-27e6-4054-abfe-6d374cdf48cb_200x.jpg?v=1678873366 200w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_a2a7892b-27e6-4054-abfe-6d374cdf48cb_280x.jpg?v=1678873366 280w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_a2a7892b-27e6-4054-abfe-6d374cdf48cb_360x.jpg?v=1678873366 360w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_a2a7892b-27e6-4054-abfe-6d374cdf48cb_540x.jpg?v=1678873366 540w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_a2a7892b-27e6-4054-abfe-6d374cdf48cb_720x.jpg?v=1678873366 720w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_a2a7892b-27e6-4054-abfe-6d374cdf48cb_900x.jpg?v=1678873366 900w"
+                                                    sizes="723px"
+                                                    srcset="
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_a2a7892b-27e6-4054-abfe-6d374cdf48cb_160x.jpg?v=1678873366 160w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_a2a7892b-27e6-4054-abfe-6d374cdf48cb_200x.jpg?v=1678873366 200w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_a2a7892b-27e6-4054-abfe-6d374cdf48cb_280x.jpg?v=1678873366 280w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_a2a7892b-27e6-4054-abfe-6d374cdf48cb_360x.jpg?v=1678873366 360w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_a2a7892b-27e6-4054-abfe-6d374cdf48cb_540x.jpg?v=1678873366 540w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_a2a7892b-27e6-4054-abfe-6d374cdf48cb_720x.jpg?v=1678873366 720w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_a2a7892b-27e6-4054-abfe-6d374cdf48cb_900x.jpg?v=1678873366 900w
+                                                    "
+                                                />
+                                                <noscript>
+                                                    <img
+                                                        class="grid-product__image lazyloaded"
+                                                        src="//cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_a2a7892b-27e6-4054-abfe-6d374cdf48cb_400x.jpg?v=1678873366"
+                                                        alt="[[alt]]"
+                                                    />
+                                                </noscript>
+                                            </div>
+                                        </div>
+
+                                        <div class="grid-item__meta">
+                                            <div class="grid-product__actions">
+                                                <button
+                                                    class="btn btn--circle btn--icon quick-product__btn js-modal-open-quick-modal-7313930191024 small--hide"
+                                                    title="Schnellkauf"
+                                                    tabindex="0"
+                                                    data-handle="sofa-set-naterial-ares-5p-sofa3p2ac1tbl-alu-kd-textilene-beige"
+                                                    aria-expanded="false"
+                                                >
+                                                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64">
+                                                        <defs>
+                                                            <style>
+                                                                .cls-1 {
+                                                                    fill: none;
+                                                                    stroke: #000;
+                                                                    stroke-miterlimit: 10;
+                                                                    stroke-width: 2px;
+                                                                }
+                                                            </style>
+                                                        </defs>
+                                                        <path class="cls-1" d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"></path>
+                                                    </svg>
+                                                    <span class="icon__fallback-text">Preview</span>
+                                                </button>
+                                            </div>
+                                            <div class="grid-item__meta-main grid-item-label">
+                                                <div class="grid-product__vendor">5 Personen : 1 Sofa + 2 Gartensessel + 1 Loungetisch</div>
+                                                <div class="grid-product__title">Loungegarnitur Ares</div>
+                                            </div>
+                                            <div class="grid-item__meta-secondary grid-item-price">
+                                                <div class="grid-product__price">
+                                                    <span class="grid-product__price--current">
+                                                        <span aria-hidden="true">1.899,99€</span>
+                                                        <span class="visually-hidden">1.899,99€</span>
+                                                    </span>
+                                                </div>
+                                                <span class="shopify-product-reviews-badge" data-id="7313930191024"></span>
+                                            </div>
+
+                                            <div style="clear: both;"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="grid-item grid-product" data-product-handle="sofa-set-naterial-atlas-premium-5p-fsc-acacia" data-product-id="7313932943536">
+                                <div class="grid-item__content">
+                                    <a href="/collections/loungegarnituren/products/sofa-set-naterial-atlas-premium-5p-fsc-acacia" class="grid-item__link" data-ezsd-touch="false" data-ezsd="false" tabindex="0">
+                                        <div class="grid-product__image-wrap">
+                                            <div class="grid-product__tag grid-product__tag--sold-out">
+                                                Ausverkauft
+                                            </div>
+                                            <div class="grid__image-ratio grid__image-ratio--square">
+                                                <img
+                                                    class="lazyautosizes lazyloaded"
+                                                    data-widths="[160, 200, 280, 360, 540, 720, 900]"
+                                                    data-aspectratio="1.8214936247723132"
+                                                    data-sizes="auto"
+                                                    alt="Loungegarnitur Atlas , 5 Personen : 1 Sofa + 2 Gartensessel + 1 Loungetisch"
+                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                    data-srcset="//cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_bafd7928-0ddf-4344-8106-345edffb27e5_160x.jpg?v=1678465578 160w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_bafd7928-0ddf-4344-8106-345edffb27e5_200x.jpg?v=1678465578 200w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_bafd7928-0ddf-4344-8106-345edffb27e5_280x.jpg?v=1678465578 280w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_bafd7928-0ddf-4344-8106-345edffb27e5_360x.jpg?v=1678465578 360w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_bafd7928-0ddf-4344-8106-345edffb27e5_540x.jpg?v=1678465578 540w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_bafd7928-0ddf-4344-8106-345edffb27e5_720x.jpg?v=1678465578 720w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_bafd7928-0ddf-4344-8106-345edffb27e5_900x.jpg?v=1678465578 900w"
+                                                    sizes="723px"
+                                                    srcset="
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_bafd7928-0ddf-4344-8106-345edffb27e5_160x.jpg?v=1678465578 160w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_bafd7928-0ddf-4344-8106-345edffb27e5_200x.jpg?v=1678465578 200w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_bafd7928-0ddf-4344-8106-345edffb27e5_280x.jpg?v=1678465578 280w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_bafd7928-0ddf-4344-8106-345edffb27e5_360x.jpg?v=1678465578 360w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_bafd7928-0ddf-4344-8106-345edffb27e5_540x.jpg?v=1678465578 540w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_bafd7928-0ddf-4344-8106-345edffb27e5_720x.jpg?v=1678465578 720w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_bafd7928-0ddf-4344-8106-345edffb27e5_900x.jpg?v=1678465578 900w
+                                                    "
+                                                />
+                                                <noscript>
+                                                    <img
+                                                        class="grid-product__image lazyloaded"
+                                                        src="//cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_bafd7928-0ddf-4344-8106-345edffb27e5_400x.jpg?v=1678465578"
+                                                        alt="[[alt]]"
+                                                    />
+                                                </noscript>
+                                            </div>
+                                        </div>
+
+                                        <div class="grid-item__meta">
+                                            <div class="grid-product__actions">
+                                                <button
+                                                    class="btn btn--circle btn--icon quick-product__btn quick-product__btn--not-ready js-modal-open-quick-modal-7313932943536 small--hide"
+                                                    title="Schnellkauf"
+                                                    tabindex="0"
+                                                    data-handle="sofa-set-naterial-atlas-premium-5p-fsc-acacia"
+                                                >
+                                                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64">
+                                                        <defs>
+                                                            <style>
+                                                                .cls-1 {
+                                                                    fill: none;
+                                                                    stroke: #000;
+                                                                    stroke-miterlimit: 10;
+                                                                    stroke-width: 2px;
+                                                                }
+                                                            </style>
+                                                        </defs>
+                                                        <path class="cls-1" d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"></path>
+                                                    </svg>
+                                                    <span class="icon__fallback-text">Preview</span>
+                                                </button>
+                                            </div>
+                                            <div class="grid-item__meta-main grid-item-label">
+                                                <div class="grid-product__vendor">5 Personen : 1 Sofa + 2 Gartensessel + 1 Loungetisch</div>
+                                                <div class="grid-product__title">Loungegarnitur Atlas</div>
+                                            </div>
+                                            <div class="grid-item__meta-secondary grid-item-price">
+                                                <div class="grid-product__price">
+                                                    <span class="grid-product__price--current">
+                                                        <span aria-hidden="true">1.399,99€</span>
+                                                        <span class="visually-hidden">1.399,99€</span>
+                                                    </span>
+                                                </div>
+                                                <span class="shopify-product-reviews-badge" data-id="7313932943536"></span>
+                                            </div>
+
+                                            <div style="clear: both;"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="QuickShopModal-7313932943536" class="modal modal--square modal--quick-shop" data-product-id="7313932943536">
+                                <div class="modal__inner">
+                                    <div class="modal__centered">
+                                        <div class="modal__centered-content">
+                                            <div id="QuickShopHolder-sofa-set-naterial-atlas-premium-5p-fsc-acacia"></div>
+                                        </div>
+
+                                        <button type="button" class="btn btn--circle btn--icon modal__close js-modal-close" tabindex="0">
+                                            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1 {
+                                                            fill: none;
+                                                            stroke: #000;
+                                                            stroke-miterlimit: 10;
+                                                            stroke-width: 2px;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-1" d="M19 17.61l27.12 27.13m0-27.13L19 44.74"></path>
+                                            </svg>
+                                            <span class="icon__fallback-text">"Schließen (Esc)"</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="grid-item grid-product" data-product-handle="corner-coffee-set-5p-naterial-augus-1table-ac-corner-alu-polye-white" data-product-id="7315608862896">
+                                <div class="grid-item__content">
+                                    <a
+                                        href="/collections/loungegarnituren/products/corner-coffee-set-5p-naterial-augus-1table-ac-corner-alu-polye-white"
+                                        class="grid-item__link"
+                                        data-ezsd-touch="false"
+                                        data-ezsd="false"
+                                        tabindex="0"
+                                    >
+                                        <div class="grid-product__image-wrap">
+                                            <div class="grid__image-ratio grid__image-ratio--square">
+                                                <img
+                                                    class="lazyautosizes lazyloaded"
+                                                    data-widths="[160, 200, 280, 360, 540, 720, 900]"
+                                                    data-aspectratio="1.0"
+                                                    data-sizes="auto"
+                                                    alt="Loungegarnitur Augus , 5 Personen : 1 Ecksofa + 1 Loungetisch"
+                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                    data-srcset="//cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_13ec13f0-3022-4e79-99be-7eba4506e6ef_160x.jpg?v=1679992581 160w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_13ec13f0-3022-4e79-99be-7eba4506e6ef_200x.jpg?v=1679992581 200w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_13ec13f0-3022-4e79-99be-7eba4506e6ef_280x.jpg?v=1679992581 280w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_13ec13f0-3022-4e79-99be-7eba4506e6ef_360x.jpg?v=1679992581 360w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_13ec13f0-3022-4e79-99be-7eba4506e6ef_540x.jpg?v=1679992581 540w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_13ec13f0-3022-4e79-99be-7eba4506e6ef_720x.jpg?v=1679992581 720w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_13ec13f0-3022-4e79-99be-7eba4506e6ef_900x.jpg?v=1679992581 900w"
+                                                    sizes="723px"
+                                                    srcset="
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_13ec13f0-3022-4e79-99be-7eba4506e6ef_160x.jpg?v=1679992581 160w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_13ec13f0-3022-4e79-99be-7eba4506e6ef_200x.jpg?v=1679992581 200w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_13ec13f0-3022-4e79-99be-7eba4506e6ef_280x.jpg?v=1679992581 280w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_13ec13f0-3022-4e79-99be-7eba4506e6ef_360x.jpg?v=1679992581 360w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_13ec13f0-3022-4e79-99be-7eba4506e6ef_540x.jpg?v=1679992581 540w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_13ec13f0-3022-4e79-99be-7eba4506e6ef_720x.jpg?v=1679992581 720w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_13ec13f0-3022-4e79-99be-7eba4506e6ef_900x.jpg?v=1679992581 900w
+                                                    "
+                                                />
+                                                <noscript>
+                                                    <img
+                                                        class="grid-product__image lazyloaded"
+                                                        src="//cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_13ec13f0-3022-4e79-99be-7eba4506e6ef_400x.jpg?v=1679992581"
+                                                        alt="[[alt]]"
+                                                    />
+                                                </noscript>
+                                            </div>
+                                        </div>
+
+                                        <div class="grid-item__meta">
+                                            <div class="grid-product__actions">
+                                                <button
+                                                    class="btn btn--circle btn--icon quick-product__btn quick-product__btn--not-ready js-modal-open-quick-modal-7315608862896 small--hide"
+                                                    title="Schnellkauf"
+                                                    tabindex="0"
+                                                    data-handle="corner-coffee-set-5p-naterial-augus-1table-ac-corner-alu-polye-white"
+                                                >
+                                                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64">
+                                                        <defs>
+                                                            <style>
+                                                                .cls-1 {
+                                                                    fill: none;
+                                                                    stroke: #000;
+                                                                    stroke-miterlimit: 10;
+                                                                    stroke-width: 2px;
+                                                                }
+                                                            </style>
+                                                        </defs>
+                                                        <path class="cls-1" d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"></path>
+                                                    </svg>
+                                                    <span class="icon__fallback-text">Preview</span>
+                                                </button>
+                                            </div>
+                                            <div class="grid-item__meta-main grid-item-label">
+                                                <div class="grid-product__vendor">5 Personen : 1 Ecksofa + 1 Loungetisch</div>
+                                                <div class="grid-product__title">Loungegarnitur Augus</div>
+                                            </div>
+                                            <div class="grid-item__meta-secondary grid-item-price">
+                                                <div class="grid-product__price">
+                                                    <span class="grid-product__price--current">
+                                                        <span aria-hidden="true">3.499,99€</span>
+                                                        <span class="visually-hidden">3.499,99€</span>
+                                                    </span>
+                                                </div>
+                                                <span class="shopify-product-reviews-badge" data-id="7315608862896"></span>
+                                            </div>
+
+                                            <div style="clear: both;"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="QuickShopModal-7315608862896" class="modal modal--square modal--quick-shop" data-product-id="7315608862896">
+                                <div class="modal__inner">
+                                    <div class="modal__centered">
+                                        <div class="modal__centered-content">
+                                            <div id="QuickShopHolder-corner-coffee-set-5p-naterial-augus-1table-ac-corner-alu-polye-white"></div>
+                                        </div>
+
+                                        <button type="button" class="btn btn--circle btn--icon modal__close js-modal-close" tabindex="0">
+                                            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1 {
+                                                            fill: none;
+                                                            stroke: #000;
+                                                            stroke-miterlimit: 10;
+                                                            stroke-width: 2px;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-1" d="M19 17.61l27.12 27.13m0-27.13L19 44.74"></path>
+                                            </svg>
+                                            <span class="icon__fallback-text">"Schließen (Esc)"</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="grid-item grid-product" data-product-handle="coffee-set-4p-naterial-ayamo-table-2ac-sofa2p-alu-wicker-natural-color" data-product-id="7315645464752">
+                                <div class="grid-item__content">
+                                    <a
+                                        href="/collections/loungegarnituren/products/coffee-set-4p-naterial-ayamo-table-2ac-sofa2p-alu-wicker-natural-color"
+                                        class="grid-item__link"
+                                        data-ezsd-touch="false"
+                                        data-ezsd="false"
+                                        tabindex="-1"
+                                    >
+                                        <div class="grid-product__image-wrap">
+                                            <div class="grid__image-ratio grid__image-ratio--square">
+                                                <img
+                                                    class="lazyautosizes lazyloaded"
+                                                    data-widths="[160, 200, 280, 360, 540, 720, 900]"
+                                                    data-aspectratio="1.0"
+                                                    data-sizes="auto"
+                                                    alt="Loungegarnitur Ayamo , 4 Personen : 1 Sofa + 2 Gartensessel + 1 Loungetisch"
+                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                    data-srcset="//cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_39403b18-8795-42d6-a050-d13971625548_160x.jpg?v=1678700816 160w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_39403b18-8795-42d6-a050-d13971625548_200x.jpg?v=1678700816 200w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_39403b18-8795-42d6-a050-d13971625548_280x.jpg?v=1678700816 280w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_39403b18-8795-42d6-a050-d13971625548_360x.jpg?v=1678700816 360w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_39403b18-8795-42d6-a050-d13971625548_540x.jpg?v=1678700816 540w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_39403b18-8795-42d6-a050-d13971625548_720x.jpg?v=1678700816 720w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_39403b18-8795-42d6-a050-d13971625548_900x.jpg?v=1678700816 900w"
+                                                    sizes="723px"
+                                                    srcset="
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_39403b18-8795-42d6-a050-d13971625548_160x.jpg?v=1678700816 160w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_39403b18-8795-42d6-a050-d13971625548_200x.jpg?v=1678700816 200w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_39403b18-8795-42d6-a050-d13971625548_280x.jpg?v=1678700816 280w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_39403b18-8795-42d6-a050-d13971625548_360x.jpg?v=1678700816 360w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_39403b18-8795-42d6-a050-d13971625548_540x.jpg?v=1678700816 540w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_39403b18-8795-42d6-a050-d13971625548_720x.jpg?v=1678700816 720w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_39403b18-8795-42d6-a050-d13971625548_900x.jpg?v=1678700816 900w
+                                                    "
+                                                />
+                                                <noscript>
+                                                    <img
+                                                        class="grid-product__image lazyloaded"
+                                                        src="//cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_39403b18-8795-42d6-a050-d13971625548_400x.jpg?v=1678700816"
+                                                        alt="[[alt]]"
+                                                    />
+                                                </noscript>
+                                            </div>
+                                        </div>
+
+                                        <div class="grid-item__meta">
+                                            <div class="grid-product__actions">
+                                                <button
+                                                    class="btn btn--circle btn--icon quick-product__btn quick-product__btn--not-ready js-modal-open-quick-modal-7315645464752 small--hide"
+                                                    title="Schnellkauf"
+                                                    tabindex="-1"
+                                                    data-handle="coffee-set-4p-naterial-ayamo-table-2ac-sofa2p-alu-wicker-natural-color"
+                                                >
+                                                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64">
+                                                        <defs>
+                                                            <style>
+                                                                .cls-1 {
+                                                                    fill: none;
+                                                                    stroke: #000;
+                                                                    stroke-miterlimit: 10;
+                                                                    stroke-width: 2px;
+                                                                }
+                                                            </style>
+                                                        </defs>
+                                                        <path class="cls-1" d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"></path>
+                                                    </svg>
+                                                    <span class="icon__fallback-text">Preview</span>
+                                                </button>
+                                            </div>
+                                            <div class="grid-item__meta-main grid-item-label">
+                                                <div class="grid-product__vendor">4 Personen : 1 Sofa + 2 Gartensessel + 1 Loungetisch</div>
+                                                <div class="grid-product__title">Loungegarnitur Ayamo</div>
+                                            </div>
+                                            <div class="grid-item__meta-secondary grid-item-price">
+                                                <div class="grid-product__price">
+                                                    <span class="grid-product__price--current">
+                                                        <span aria-hidden="true">3.199,99€</span>
+                                                        <span class="visually-hidden">3.199,99€</span>
+                                                    </span>
+                                                </div>
+                                                <span class="shopify-product-reviews-badge" data-id="7315645464752"></span>
+                                            </div>
+
+                                            <div style="clear: both;"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="QuickShopModal-7315645464752" class="modal modal--square modal--quick-shop" data-product-id="7315645464752">
+                                <div class="modal__inner">
+                                    <div class="modal__centered">
+                                        <div class="modal__centered-content">
+                                            <div id="QuickShopHolder-coffee-set-4p-naterial-ayamo-table-2ac-sofa2p-alu-wicker-natural-color"></div>
+                                        </div>
+
+                                        <button type="button" class="btn btn--circle btn--icon modal__close js-modal-close" tabindex="-1">
+                                            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1 {
+                                                            fill: none;
+                                                            stroke: #000;
+                                                            stroke-miterlimit: 10;
+                                                            stroke-width: 2px;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-1" d="M19 17.61l27.12 27.13m0-27.13L19 44.74"></path>
+                                            </svg>
+                                            <span class="icon__fallback-text">"Schließen (Esc)"</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="grid-item grid-product" data-product-handle="corner-sofa-set-4p-naterial-bali-table-corner-fsc-teak-alu-polyester" data-product-id="7315667026096">
+                                <div class="grid-item__content">
+                                    <a
+                                        href="/collections/loungegarnituren/products/corner-sofa-set-4p-naterial-bali-table-corner-fsc-teak-alu-polyester"
+                                        class="grid-item__link"
+                                        data-ezsd-touch="false"
+                                        data-ezsd="false"
+                                        tabindex="-1"
+                                    >
+                                        <div class="grid-product__image-wrap">
+                                            <div class="grid__image-ratio grid__image-ratio--square">
+                                                <img
+                                                    class="lazyautosizes lazyloaded"
+                                                    data-widths="[160, 200, 280, 360, 540, 720, 900]"
+                                                    data-aspectratio="1.0"
+                                                    data-sizes="auto"
+                                                    alt="Loungegarnitur Bali , 4 Personen : 1 Ecksofa + 1 Loungetisch"
+                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                    data-srcset="//cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_fe4b0721-0d1a-470f-afdb-a23b01fe840a_160x.jpg?v=1678702030 160w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_fe4b0721-0d1a-470f-afdb-a23b01fe840a_200x.jpg?v=1678702030 200w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_fe4b0721-0d1a-470f-afdb-a23b01fe840a_280x.jpg?v=1678702030 280w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_fe4b0721-0d1a-470f-afdb-a23b01fe840a_360x.jpg?v=1678702030 360w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_fe4b0721-0d1a-470f-afdb-a23b01fe840a_540x.jpg?v=1678702030 540w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_fe4b0721-0d1a-470f-afdb-a23b01fe840a_720x.jpg?v=1678702030 720w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_fe4b0721-0d1a-470f-afdb-a23b01fe840a_900x.jpg?v=1678702030 900w"
+                                                    sizes="723px"
+                                                    srcset="
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_fe4b0721-0d1a-470f-afdb-a23b01fe840a_160x.jpg?v=1678702030 160w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_fe4b0721-0d1a-470f-afdb-a23b01fe840a_200x.jpg?v=1678702030 200w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_fe4b0721-0d1a-470f-afdb-a23b01fe840a_280x.jpg?v=1678702030 280w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_fe4b0721-0d1a-470f-afdb-a23b01fe840a_360x.jpg?v=1678702030 360w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_fe4b0721-0d1a-470f-afdb-a23b01fe840a_540x.jpg?v=1678702030 540w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_fe4b0721-0d1a-470f-afdb-a23b01fe840a_720x.jpg?v=1678702030 720w,
+                                                        //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_fe4b0721-0d1a-470f-afdb-a23b01fe840a_900x.jpg?v=1678702030 900w
+                                                    "
+                                                />
+                                                <noscript>
+                                                    <img
+                                                        class="grid-product__image lazyloaded"
+                                                        src="//cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_fe4b0721-0d1a-470f-afdb-a23b01fe840a_400x.jpg?v=1678702030"
+                                                        alt="[[alt]]"
+                                                    />
+                                                </noscript>
+                                            </div>
+                                        </div>
+
+                                        <div class="grid-item__meta">
+                                            <div class="grid-product__actions">
+                                                <button
+                                                    class="btn btn--circle btn--icon quick-product__btn quick-product__btn--not-ready js-modal-open-quick-modal-7315667026096 small--hide"
+                                                    title="Schnellkauf"
+                                                    tabindex="-1"
+                                                    data-handle="corner-sofa-set-4p-naterial-bali-table-corner-fsc-teak-alu-polyester"
+                                                >
+                                                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64">
+                                                        <defs>
+                                                            <style>
+                                                                .cls-1 {
+                                                                    fill: none;
+                                                                    stroke: #000;
+                                                                    stroke-miterlimit: 10;
+                                                                    stroke-width: 2px;
+                                                                }
+                                                            </style>
+                                                        </defs>
+                                                        <path class="cls-1" d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"></path>
+                                                    </svg>
+                                                    <span class="icon__fallback-text">Preview</span>
+                                                </button>
+                                            </div>
+                                            <div class="grid-item__meta-main grid-item-label">
+                                                <div class="grid-product__vendor">4 Personen : 1 Ecksofa + 1 Loungetisch</div>
+                                                <div class="grid-product__title">Loungegarnitur Bali</div>
+                                            </div>
+                                            <div class="grid-item__meta-secondary grid-item-price">
+                                                <div class="grid-product__price">
+                                                    <span class="grid-product__price--current">
+                                                        <span aria-hidden="true">1.799,99€</span>
+                                                        <span class="visually-hidden">1.799,99€</span>
+                                                    </span>
+                                                </div>
+                                                <span class="shopify-product-reviews-badge" data-id="7315667026096"></span>
+                                            </div>
+
+                                            <div style="clear: both;"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="QuickShopModal-7315667026096" class="modal modal--square modal--quick-shop" data-product-id="7315667026096">
+                                <div class="modal__inner">
+                                    <div class="modal__centered">
+                                        <div class="modal__centered-content">
+                                            <div id="QuickShopHolder-corner-sofa-set-4p-naterial-bali-table-corner-fsc-teak-alu-polyester"></div>
+                                        </div>
+
+                                        <button type="button" class="btn btn--circle btn--icon modal__close js-modal-close" tabindex="-1">
+                                            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1 {
+                                                            fill: none;
+                                                            stroke: #000;
+                                                            stroke-miterlimit: 10;
+                                                            stroke-width: 2px;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-1" d="M19 17.61l27.12 27.13m0-27.13L19 44.74"></path>
+                                            </svg>
+                                            <span class="icon__fallback-text">"Schließen (Esc)"</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="grid-item grid-product" data-product-handle="sofa-set-bambu-2p-2-armch-1-table-steel-wicker-polyester-natural" data-product-id="7315668598960">
+                                <div class="grid-item__content">
+                                    <a href="/collections/loungegarnituren/products/sofa-set-bambu-2p-2-armch-1-table-steel-wicker-polyester-natural" class="grid-item__link" data-ezsd-touch="false" data-ezsd="false" tabindex="-1">
+                                        <div class="grid-product__image-wrap">
+                                            <div class="grid__image-ratio grid__image-ratio--square">
+                                                <img
+                                                    class="lazyload"
+                                                    data-src="//cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_101b5454-6d1c-40c1-8816-e2ad402f1fcb_{width}x.jpg?v=1680104851"
+                                                    data-widths="[160, 200, 280, 360, 540, 720, 900]"
+                                                    data-aspectratio="1.4936519790888723"
+                                                    data-sizes="auto"
+                                                    alt="Loungegarnitur Bambu , 4 Personen : 1 Sofa + 2 Gartensessel + 1 Loungetisch"
+                                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                />
+                                                <noscript>
+                                                    <img
+                                                        class="grid-product__image lazyloaded"
+                                                        src="//cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_101b5454-6d1c-40c1-8816-e2ad402f1fcb_400x.jpg?v=1680104851"
+                                                        alt="[[alt]]"
+                                                    />
+                                                </noscript>
+                                            </div>
+                                        </div>
+
+                                        <div class="grid-item__meta">
+                                            <div class="grid-product__actions">
+                                                <button
+                                                    class="btn btn--circle btn--icon quick-product__btn quick-product__btn--not-ready js-modal-open-quick-modal-7315668598960 small--hide"
+                                                    title="Schnellkauf"
+                                                    tabindex="-1"
+                                                    data-handle="sofa-set-bambu-2p-2-armch-1-table-steel-wicker-polyester-natural"
+                                                >
+                                                    <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-search" viewBox="0 0 64 64">
+                                                        <defs>
+                                                            <style>
+                                                                .cls-1 {
+                                                                    fill: none;
+                                                                    stroke: #000;
+                                                                    stroke-miterlimit: 10;
+                                                                    stroke-width: 2px;
+                                                                }
+                                                            </style>
+                                                        </defs>
+                                                        <path class="cls-1" d="M47.16 28.58A18.58 18.58 0 1 1 28.58 10a18.58 18.58 0 0 1 18.58 18.58zM54 54L41.94 42"></path>
+                                                    </svg>
+                                                    <span class="icon__fallback-text">Preview</span>
+                                                </button>
+                                            </div>
+                                            <div class="grid-item__meta-main grid-item-label">
+                                                <div class="grid-product__vendor">4 Personen : 1 Sofa + 2 Gartensessel + 1 Loungetisch</div>
+                                                <div class="grid-product__title">Loungegarnitur Bambu</div>
+                                            </div>
+                                            <div class="grid-item__meta-secondary grid-item-price">
+                                                <div class="grid-product__price">
+                                                    <span class="grid-product__price--current">
+                                                        <span aria-hidden="true">799,99€</span>
+                                                        <span class="visually-hidden">799,99€</span>
+                                                    </span>
+                                                </div>
+                                                <span class="shopify-product-reviews-badge" data-id="7315668598960"></span>
+                                            </div>
+
+                                            <div style="clear: both;"></div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div id="QuickShopModal-7315668598960" class="modal modal--square modal--quick-shop" data-product-id="7315668598960">
+                                <div class="modal__inner">
+                                    <div class="modal__centered">
+                                        <div class="modal__centered-content">
+                                            <div id="QuickShopHolder-sofa-set-bambu-2p-2-armch-1-table-steel-wicker-polyester-natural"></div>
+                                        </div>
+
+                                        <button type="button" class="btn btn--circle btn--icon modal__close js-modal-close" tabindex="-1">
+                                            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64">
+                                                <defs>
+                                                    <style>
+                                                        .cls-1 {
+                                                            fill: none;
+                                                            stroke: #000;
+                                                            stroke-miterlimit: 10;
+                                                            stroke-width: 2px;
+                                                        }
+                                                    </style>
+                                                </defs>
+                                                <path class="cls-1" d="M19 17.61l27.12 27.13m0-27.13L19 44.74"></path>
+                                            </svg>
+                                            <span class="icon__fallback-text">"Schließen (Esc)"</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <p class="featured-mobile-action">
+              <a href="/collections/loungegarnituren" class="section-header__link">Alle <img src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198" /></a>
+          </p>
+          <script type="text/javascript">
+              $(".col-item.slick-slider").slick({
+                  dots: false,
+                  infinite: false,
+                  speed: 300,
+                  slidesToShow: 3,
+                  slidesToScroll: 3,
+                  responsive: [
+                      {
+                          breakpoint: 850,
+                          settings: {
+                              slidesToShow: 2,
+                              slidesToScroll: 2,
+                              infinite: false,
+                              dots: false,
+                          },
+                      },
+                      {
+                          breakpoint: 770,
+                          settings: {
+                              slidesToShow: 1,
+                              slidesToScroll: 1,
+                          },
+                      },
+                  ],
+              });
+          </script>
+      </div>
+    </div>
+
+    <div id="shopify-section-16318914611da0b2e6" class="shopify-section index-section--flush">
+      <div class="page-width section-image-text no-padding">
+        <div data-section-id="16318914611da0b2e6" data-section-type="background-image" class="block-media-text block-media-text--16318914611da0b2e6 block-media-text--550 loaded">
+            <div class="medium-up--hide">
+                <img
+                    class="lazyloaded img_large_no_margin"
+                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Explore_and_Combine_DE_Mobile_1800x.jpg?v=1646927778"
+                    alt="Garten Couchgarnitur für 5 Personen aus Aluminium, mit abnehmbaren Kissen"
+                />
+                <img
+                    class="lazyloaded img_large_no_margin"
+                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Explore_and_Combine_DE_Mobile_2_1800x.jpg?v=1646927843"
+                    alt="Garten Esstisch aus Aluminium, ausziehbar, für 6 bis 8 Personen"
+                />
+                <img
+                    class="lazyloaded img_large_no_margin_last"
+                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Explore_and_Combine_DE_Mobile_3_1800x.jpg?v=1646927898"
+                    alt="Garten Sofa aus Aluminium, 3 Sitzer, mit abnehmbaren Kissen in Hellgrau"
+                />
+            </div>
+
+            <div class="block-media-text__container small--hide">
+                <img
+                    class="block-media-text__image block-media-text__image--16318914611da0b2e6 lazyautosizes lazyloaded"
+                    src=""
+                    data-aspectratio="1.483535528596187"
+                    data-widths="[720, 900, 1080, 1800, 2400]"
+                    data-sizes="auto"
+                    alt=""
+                    style="object-position: center;"
+                    data-srcset="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Aussuchen_und_kombinieren_720x.jpg?v=1679305431 720w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/Aussuchen_und_kombinieren_900x.jpg?v=1679305431 900w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/Aussuchen_und_kombinieren_1080x.jpg?v=1679305431 1080w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/Aussuchen_und_kombinieren_1800x.jpg?v=1679305431 1800w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/Aussuchen_und_kombinieren_2400x.jpg?v=1679305431 2400w"
+                    sizes="1601px"
+                    srcset="
+                        //cdn.shopify.com/s/files/1/0603/2677/2912/files/Aussuchen_und_kombinieren_720x.jpg?v=1679305431   720w,
+                        //cdn.shopify.com/s/files/1/0603/2677/2912/files/Aussuchen_und_kombinieren_900x.jpg?v=1679305431   900w,
+                        //cdn.shopify.com/s/files/1/0603/2677/2912/files/Aussuchen_und_kombinieren_1080x.jpg?v=1679305431 1080w,
+                        //cdn.shopify.com/s/files/1/0603/2677/2912/files/Aussuchen_und_kombinieren_1800x.jpg?v=1679305431 1800w,
+                        //cdn.shopify.com/s/files/1/0603/2677/2912/files/Aussuchen_und_kombinieren_2400x.jpg?v=1679305431 2400w
+                    "
+                />
+                <noscript>
+                    <img class="image-fit block-media-text__image block-media-text__image--16318914611da0b2e6 lazyloaded" src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Aussuchen_und_kombinieren_1800x.jpg?v=1679305431" alt="" />
+                </noscript>
+            </div>
+            <div class="block-media-text__inner">
+                <div class="block-media-text__aligner block-media-text--right">
+                    <div class="block-media-text__text">
+                        <p class="h3">Aussuchen und kombinieren</p>
+                        <div class="rte block-media-text__subtext"><p>Die gesamte Kollektion ist sowohl elegant als auch modern. Ihre rechteckigen Formen verbunden mit Latten verleihen ihrem Design eine wunderbare Leichtigkeit</p></div>
+                        <a href="/collections/kollektion-odyssea-ii" class="btn">
+                            Mehr anzeigen
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="shopify-section-16327561065efd3d54" class="shopify-section">
+      <div data-section-id="16327561065efd3d54" data-section-type="our-essentials">
+          <div class="page-width">
+              <style data-shopify="">
+                  .flex-grid--16327561065efd3d54 {
+                      margin-top: -15px;
+                      margin-left: -15px;
+                  }
+
+                  .flex-grid--16327561065efd3d54 .flex-grid--gutters {
+                      margin-top: -15px;
+                      margin-left: -15px;
+                  }
+
+                  .flex-grid--16327561065efd3d54 .flex-grid__item {
+                      padding-top: 15px;
+                      padding-left: 15px;
+                  }
+
+                  @media only screen and (max-width: 589px) {
+                      .flex-grid--16327561065efd3d54 {
+                          margin-top: -7px;
+                          margin-left: -7px;
+                      }
+
+                      .flex-grid--16327561065efd3d54 .flex-grid--gutters {
+                          margin-top: -7px;
+                          margin-left: -7px;
+                      }
+
+                      .flex-grid--16327561065efd3d54 .flex-grid__item {
+                          padding-top: 7px;
+                          padding-left: 7px;
+                      }
+                  }
+              </style>
+              <div class="our-essentials">
+                  <div class="flex-grid flex-grid--gutters flex-grid--16327561065efd3d54">
+                      <style data-shopify="">
+                          .flex-grid__item--889ec290-13cd-4d2b-95a8-1548deee32fb .btn {
+                              background: !important;
+                              border: none !important;
+                          }
+                      </style>
+                      <div class="flex-grid__item flex-grid__item--100 flex-grid__item--889ec290-13cd-4d2b-95a8-1548deee32fb type-product">
+                          <div class="our-essentials__container">
+                              <div class="type-product__wrapper">
+                                  <h3>Unsere Basics</h3>
+                                  <div class="our-essentials__product">
+                                      <div class="our-essentials__product-images">
+                                          <div class="our-essentials__product-slider">
+                                              <div class="single-item slick-slider">
+                                                  
+                                                <div
+                                                    class="grid-item grid-product"
+                                                    data-product-handle="dining-table-naterial-lyra-ii-updown-alu-glass-180260x96-anthracite"
+                                                    data-product-id="7055375499440"
+                                                    role="option"
+                                                >
+                                                    <div class="grid-item__content">
+                                                        <a href="/products/dining-table-naterial-lyra-ii-updown-alu-glass-180260x96-anthracite" class="grid-item__link" tabindex="0">
+                                                            <div class="grid-product__image-wrap">
+                                                                <div class="grid__image-ratio grid__image-ratio--square">
+                                                                    <img
+                                                                        class="lazyautosizes lazyloaded"
+                                                                        data-widths="[160, 200, 280, 360, 540, 720, 900]"
+                                                                        data-aspectratio="1.0"
+                                                                        data-sizes="auto"
+                                                                        alt="[[alt]]"
+                                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                                                        data-srcset="//cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_9b0e217b-8006-4114-8d86-c8275c9f0b2b_160x.jpg?v=1678875185 160w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_9b0e217b-8006-4114-8d86-c8275c9f0b2b_200x.jpg?v=1678875185 200w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_9b0e217b-8006-4114-8d86-c8275c9f0b2b_280x.jpg?v=1678875185 280w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_9b0e217b-8006-4114-8d86-c8275c9f0b2b_360x.jpg?v=1678875185 360w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_9b0e217b-8006-4114-8d86-c8275c9f0b2b_540x.jpg?v=1678875185 540w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_9b0e217b-8006-4114-8d86-c8275c9f0b2b_720x.jpg?v=1678875185 720w, //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_9b0e217b-8006-4114-8d86-c8275c9f0b2b_900x.jpg?v=1678875185 900w"
+                                                                        sizes="711px"
+                                                                        srcset="
+                                                                            //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_9b0e217b-8006-4114-8d86-c8275c9f0b2b_160x.jpg?v=1678875185 160w,
+                                                                            //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_9b0e217b-8006-4114-8d86-c8275c9f0b2b_200x.jpg?v=1678875185 200w,
+                                                                            //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_9b0e217b-8006-4114-8d86-c8275c9f0b2b_280x.jpg?v=1678875185 280w,
+                                                                            //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_9b0e217b-8006-4114-8d86-c8275c9f0b2b_360x.jpg?v=1678875185 360w,
+                                                                            //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_9b0e217b-8006-4114-8d86-c8275c9f0b2b_540x.jpg?v=1678875185 540w,
+                                                                            //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_9b0e217b-8006-4114-8d86-c8275c9f0b2b_720x.jpg?v=1678875185 720w,
+                                                                            //cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_9b0e217b-8006-4114-8d86-c8275c9f0b2b_900x.jpg?v=1678875185 900w
+                                                                        "
+                                                                    />
+                                                                    <noscript>
+                                                                        <img
+                                                                            class="grid-product__image lazyloaded"
+                                                                            src="//cdn.shopify.com/s/files/1/0603/2677/2912/products/jpg_9b0e217b-8006-4114-8d86-c8275c9f0b2b_400x.jpg?v=1678875185"
+                                                                            alt="[[alt]]"
+                                                                        />
+                                                                    </noscript>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="grid-item__meta">
+                                                                <div class="grid-item__meta-main grid-item-label">
+                                                                    <div class="grid-product__vendor">Gartentische</div>
+                                                                    <div class="grid-product__title">Gartentisch ausziehbar Lyra II</div>
+                                                                </div>
+                                                                <div style="clear: both;"></div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                      
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="our-essentials__product-text type-product__text our-essentials__text small--text-center">
+                                          <img
+                                              class="image-fit promo-grid__bg-image promo-grid__bg-image--889ec290-13cd-4d2b-95a8-1548deee32fb lazyautosizes lazyloaded"
+                                              src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Our_Esential_DE_5cdbc9b0-8f3a-415b-b5ca-22a81c0ff597_900x.jpg?v=1646734778"
+                                              data-src=""
+                                              data-aspectratio="1.2485549132947977"
+                                              data-sizes="auto"
+                                              alt="Garten Esstisch aus Aluminium mit Glattglasplatte, ausziehbar, für 6 bis 8 Personen"
+                                              id="slide_img"
+                                              sizes="1539px"
+                                          />
+                                          <noscript>
+                                              <img
+                                                  class="image-fit promo-grid__bg-image promo-grid__bg-image--889ec290-13cd-4d2b-95a8-1548deee32fb lazyloaded"
+                                                  src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Our_Esential_DE_5cdbc9b0-8f3a-415b-b5ca-22a81c0ff597_1800x.jpg?v=1646734778"
+                                                  alt="Garten Esstisch aus Aluminium mit Glattglasplatte, ausziehbar, für 6 bis 8 Personen"
+                                              />
+                                          </noscript>
+                                      </div>
+                                      <p class="action">
+                                          <a href="#test">
+                                              Die Auswahl anschauen
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                                                  <path
+                                                      fill="#000"
+                                                      fill-rule="evenodd"
+                                                      d="M14.3 18.7001c.1774.1987.4338.3085.7.3.2662.0085.5226-.1013.7-.3l6-6c.3811-.3888.3811-1.0111 0-1.4l-6-5.99999c-.3981-.29859-.9552-.259-1.3071.09289-.3519.35189-.3915.90899-.0929 1.30711l4.3 4.29999H3c-.55228 0-1 .4477-1 1s.44772 1 1 1h15.6l-4.3 4.3c-.3811.3889-.3811 1.0112 0 1.4Z"
+                                                      clip-rule="evenodd"
+                                                  ></path>
+                                                  <mask id="a" width="20" height="15" x="2" y="5" maskUnits="userSpaceOnUse" style="mask-type: alpha;">
+                                                      <path
+                                                          fill="#fff"
+                                                          fill-rule="evenodd"
+                                                          d="M14.3 18.7001c.1774.1987.4338.3085.7.3.2662.0085.5226-.1013.7-.3l6-6c.3811-.3888.3811-1.0111 0-1.4l-6-5.99999c-.3981-.29859-.9552-.259-1.3071.09289-.3519.35189-.3915.90899-.0929 1.30711l4.3 4.29999H3c-.55228 0-1 .4477-1 1s.44772 1 1 1h15.6l-4.3 4.3c-.3811.3889-.3811 1.0112 0 1.4Z"
+                                                          clip-rule="evenodd"
+                                                      ></path>
+                                                  </mask>
+                                              </svg>
+                                          </a>
+                                      </p>
+
+                                      <script type="text/javascript">
+                                          $(".single-item").slick({
+                                              lazyLoad: "progressive",
+                                          });
+
+                                          $(".single-item").on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+                                              if (nextSlide == 0) {
+                                                  document.getElementById("slide_img").src = "//cdn.shopify.com/s/files/1/0603/2677/2912/files/Our_Esential_DE_5cdbc9b0-8f3a-415b-b5ca-22a81c0ff597_900x.jpg?v=1646734778";
+                                              }
+                                              if (nextSlide == 1) {
+                                                  document.getElementById("slide_img").src = "//cdn.shopify.com/shopifycloud/shopify/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_900x.gif";
+                                              }
+                                              if (nextSlide == 2) {
+                                                  document.getElementById("slide_img").src = "//cdn.shopify.com/shopifycloud/shopify/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_900x.gif";
+                                              }
+                                          });
+                                      </script>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div id="shopify-section-1632163980b34b5da8" class="shopify-section index-section--flush">
+          <div class="page-width block-media-text-v2 no-padding" style="background-color: #ffffff;">
+              <div data-section-id="1632163980b34b5da8" data-section-type="background-image" class="block-media-text-V2- block-media-text-V2---1632163980b34b5da8 block-media-text-V2---550">
+                  <div class="block-media-text-V2-__container">
+                      <img
+                          class="block-media-text-V2-__image block-media-text-V2-__image--1632163980b34b5da8 lazyautosizes lazyloaded"
+                          src=""
+                          data-aspectratio="0.6666666666666666"
+                          data-widths="[720, 900, 1080, 1800, 2400]"
+                          data-sizes="auto"
+                          alt=""
+                          style="object-position: center;"
+                          data-srcset="//cdn.shopify.com/s/files/1/0603/2677/2912/files/8050262637454_3276007105094_8435578501161_3700421808342-A-001-1702002_720x.jpg?v=1678088816 720w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/8050262637454_3276007105094_8435578501161_3700421808342-A-001-1702002_900x.jpg?v=1678088816 900w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/8050262637454_3276007105094_8435578501161_3700421808342-A-001-1702002_1080x.jpg?v=1678088816 1080w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/8050262637454_3276007105094_8435578501161_3700421808342-A-001-1702002_1800x.jpg?v=1678088816 1800w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/8050262637454_3276007105094_8435578501161_3700421808342-A-001-1702002_2400x.jpg?v=1678088816 2400w"
+                          sizes="360px"
+                          srcset="
+                              //cdn.shopify.com/s/files/1/0603/2677/2912/files/8050262637454_3276007105094_8435578501161_3700421808342-A-001-1702002_720x.jpg?v=1678088816   720w,
+                              //cdn.shopify.com/s/files/1/0603/2677/2912/files/8050262637454_3276007105094_8435578501161_3700421808342-A-001-1702002_900x.jpg?v=1678088816   900w,
+                              //cdn.shopify.com/s/files/1/0603/2677/2912/files/8050262637454_3276007105094_8435578501161_3700421808342-A-001-1702002_1080x.jpg?v=1678088816 1080w,
+                              //cdn.shopify.com/s/files/1/0603/2677/2912/files/8050262637454_3276007105094_8435578501161_3700421808342-A-001-1702002_1800x.jpg?v=1678088816 1800w,
+                              //cdn.shopify.com/s/files/1/0603/2677/2912/files/8050262637454_3276007105094_8435578501161_3700421808342-A-001-1702002_2400x.jpg?v=1678088816 2400w
+                          "
+                      />
+                      <noscript>
+                          <img
+                              class="image-fit block-media-text-V2-__image block-media-text-V2-__image--1632163980b34b5da8 lazyloaded"
+                              src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/8050262637454_3276007105094_8435578501161_3700421808342-A-001-1702002_1800x.jpg?v=1678088816"
+                              alt=""
+                          />
+                      </noscript>
+                  </div>
+                  <div class="block-media-text-V2-__inner">
+                      <div class="block-media-text-V2-__aligner block-media-text-V2---left">
+                          <div class="block-media-text-V2-__text">
+                              <p class="h3 only-large">Von der Natur inspiriert</p>
+                              <div class="block-media-text-V2-__text_box">
+                                  <div class="rte block-media-text-V2-__subtext">
+                                      <p class="h3 only-small">Von der Natur inspiriert</p>
+                                      <img src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/logo-black.svg?v=106224337160877540271679434908" alt="" />
+                                      <p>Ist DIE Marke für grossartiges Leben im Freien : erschaffen, organisieren, dekorieren ... Spass haben an allen Ihren Outdoor Plätzen (im Garten, auf der Terrasse, im Hof, auf dem Balkon .... )</p>
+                                  </div>
+                                  <img id="pictoOurNatureInspiration" src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/group-pictos.svg?v=23076500219933203031679434910" />
+                                  <a href="/pages/uber-naterial" class="btn">
+                                      Mehr darüber wissen
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div id="shopify-section-1631649139e935d06e" class="shopify-section">
+          <div class="columns-pictos">
+              <div class="page-width">
+                  <div class="grid grid--uniform grid--flush-bottom label">
+                      <div class="grid__item medium-up--one-quarter text-center">
+                          <div style="margin: 0 auto; max-width: 50px;">
+                              <div class="" style="height: 0; padding-bottom: 97.9591836734694%;">
+                                  <img
+                                      class="lazyautosizes lazyloaded"
+                                      data-widths="[180, 360, 540, 720, 900, 1080]"
+                                      data-aspectratio="1.0208333333333333"
+                                      data-sizes="auto"
+                                      alt=""
+                                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                      data-srcset="//cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_180x.png?v=1678272693 180w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_360x.png?v=1678272693 360w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_540x.png?v=1678272693 540w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_720x.png?v=1678272693 720w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_900x.png?v=1678272693 900w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_1080x.png?v=1678272693 1080w"
+                                      sizes="50px"
+                                      srcset="
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_180x.png?v=1678272693   180w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_360x.png?v=1678272693   360w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_540x.png?v=1678272693   540w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_720x.png?v=1678272693   720w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_900x.png?v=1678272693   900w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_1080x.png?v=1678272693 1080w
+                                      "
+                                  />
+                              </div>
+                          </div>
+                          <div class="title rte--block">Sichere Bezahlung</div>
+                      </div>
+                      <div class="grid__item medium-up--one-quarter text-center">
+                          <div style="margin: 0 auto; max-width: 50px;">
+                              <div class="" style="height: 0; padding-bottom: 100%;">
+                                  <img
+                                      class="lazyautosizes lazyloaded"
+                                      data-widths="[180, 360, 540, 720, 900, 1080]"
+                                      data-aspectratio="1.0"
+                                      data-sizes="auto"
+                                      alt=""
+                                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                      data-srcset="//cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_180x.png?v=1678272693 180w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_360x.png?v=1678272693 360w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_540x.png?v=1678272693 540w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_720x.png?v=1678272693 720w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_900x.png?v=1678272693 900w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_1080x.png?v=1678272693 1080w"
+                                      sizes="50px"
+                                      srcset="
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_180x.png?v=1678272693   180w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_360x.png?v=1678272693   360w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_540x.png?v=1678272693   540w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_720x.png?v=1678272693   720w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_900x.png?v=1678272693   900w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_1080x.png?v=1678272693 1080w
+                                      "
+                                  />
+                              </div>
+                          </div>
+                          <div class="title rte--block">Kostenlose Lieferung</div>
+                      </div>
+                      <div class="grid__item medium-up--one-quarter text-center">
+                          <div style="margin: 0 auto; max-width: 50px;">
+                              <div class="" style="height: 0; padding-bottom: 100%;">
+                                  <img
+                                      class="lazyautosizes lazyloaded"
+                                      data-widths="[180, 360, 540, 720, 900, 1080]"
+                                      data-aspectratio="1.0"
+                                      data-sizes="auto"
+                                      alt=""
+                                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                      data-srcset="//cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_180x.png?v=1678272693 180w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_360x.png?v=1678272693 360w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_540x.png?v=1678272693 540w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_720x.png?v=1678272693 720w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_900x.png?v=1678272693 900w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_1080x.png?v=1678272693 1080w"
+                                      sizes="50px"
+                                      srcset="
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_180x.png?v=1678272693   180w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_360x.png?v=1678272693   360w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_540x.png?v=1678272693   540w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_720x.png?v=1678272693   720w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_900x.png?v=1678272693   900w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_1080x.png?v=1678272693 1080w
+                                      "
+                                  />
+                              </div>
+                          </div>
+                          <div class="title rte--block">Kostenlose Rücksendung</div>
+                      </div>
+                      <div class="grid__item medium-up--one-quarter text-center">
+                          <div style="margin: 0 auto; max-width: 50px;">
+                              <div class="" style="height: 0; padding-bottom: 97.9591836734694%;">
+                                  <img
+                                      class="lazyautosizes lazyloaded"
+                                      data-widths="[180, 360, 540, 720, 900, 1080]"
+                                      data-aspectratio="1.0208333333333333"
+                                      data-sizes="auto"
+                                      alt=""
+                                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                      data-srcset="//cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_180x.png?v=1678272694 180w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_360x.png?v=1678272694 360w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_540x.png?v=1678272694 540w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_720x.png?v=1678272694 720w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_900x.png?v=1678272694 900w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_1080x.png?v=1678272694 1080w"
+                                      sizes="50px"
+                                      srcset="
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_180x.png?v=1678272694   180w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_360x.png?v=1678272694   360w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_540x.png?v=1678272694   540w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_720x.png?v=1678272694   720w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_900x.png?v=1678272694   900w,
+                                          //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_1080x.png?v=1678272694 1080w
+                                      "
+                                  />
+                              </div>
+                          </div>
+                          <div class="title rte--block">Kundenservice</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- END content_for_index -->
+    </div>
+
+
   </body>
 </html>

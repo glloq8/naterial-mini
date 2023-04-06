@@ -2,8 +2,14 @@
 // global
 // --------------------------------------------------
 
-@import 'helpers/_variables';
-@import 'helpers/_mixins';
-@import 'helpers/_layout';
+@import 'theme.scss';
+@import 'cms';
+@import 'yannick';
+@import 'charlie';
+@import 'slick-carousel';
 
-@import 'base/_reset';
+// @import 'helpers/_variables';
+// @import 'helpers/_mixins';
+// @import 'helpers/_layout';
+
+// @import 'base/_reset';

@@ -1,0 +1,14 @@
+@media only screen and (max-width: 768px) {
+  #CollectionSection .ezsd-dots_container {
+    display: none;
+  }
+
+  #CollectionSection .ezsd-arrows--chl .ezsd-arrows_container {
+    height: 30px;
+  }
+
+  #CollectionSection .ezsd-arrows--chl.ezsd-arrows--position-ms .ezsd-arrows_container {
+    margin-top: -15px;
+  }
+}
+/*# sourceMappingURL=charlie.css.map */
