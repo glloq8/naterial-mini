@@ -1,3 +1,33 @@
+@font-face {
+  font-display: swap;
+  font-family: LeroyMerlinScript;
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/leroymerlinscript-webfont.woff2') format("woff2");
+}
+@font-face {
+  font-family: 'leroy_merlin_sansregular';
+  src: url('../fonts/leroymerlinsans-regular-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'leroy_merlin_sanssemibold';
+  src: url('../fonts/leroymerlinsans-semibold-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'leroy_merlin_serifregular';
+  src: url('../fonts/leroymerlinserif-regular-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+[class$="--lmscript"] {
+  font-family: LeroyMerlinScript;
+  font-weight: 400
+}
+
 a.lienPrivacy {
   font-weight: bold;
 }

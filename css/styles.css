@@ -1,5 +1,86 @@
 @charset "UTF-8";
 
+/*---------------------------------------------------------------------------------------------------*/
+
+/*-_-_-_-_-_-_- typography -_-_-_-_-_-_- */
+
+/*---------------------------------------------------------------------------------------------------*/
+
+:root {
+  --typeHeaderPrimary: Helvetica;
+  --typeHeaderFallback: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  --typeHeaderSize: 36px;
+  --typeHeaderWeight: 400;
+  --typeHeaderLineHeight: 1.2;
+  --typeHeaderSpacing: 0.0em;
+  --typeBasePrimary: 'leroy_merlin_sansregular';
+  --typeBasePrimarySemi: 'leroy_merlin_sanssemibold';
+  --typeBaseTitle: 'leroy_merlin_serifregular';
+  --typeBaseFallback: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  --typeBaseSize: 16px;
+  --typeBaseWeight: 400;
+  --typeBaseSpacing: 0.025em;
+  --typeBaseLineHeight: 1.5;
+  --colorSmallImageBg: #ffffff;
+  --colorSmallImageBgDark: #f7f7f7;
+  --colorLargeImageBg: #e7e7e7;
+  --colorLargeImageBgLight: #ffffff;
+  --colorRed: #EA6062;
+  --iconWeight: 3px;
+  --iconLinecaps: miter;
+  --buttonRadius: 3px;
+  --btnPadding: 11px 25px;
+  --roundness: 0px;
+  --gridThickness: 0px;
+  --productTileMargin: 5%;
+  --collectionTileMargin: 17%;
+  --swatchSize: 30px;
+}
+
+/*---------------------------------------------------------------------------------------------------*/
+
+/*-_-_-_-_-_-_- colors -_-_-_-_-_-_- */
+
+/*---------------------------------------------------------------------------------------------------*/
+
+:root {
+  --color-text: #000;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: LeroyMerlinScript;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/leroymerlinscript-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'leroy_merlin_sansregular';
+  src: url("../fonts/leroymerlinsans-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'leroy_merlin_sanssemibold';
+  src: url("../fonts/leroymerlinsans-semibold-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'leroy_merlin_serifregular';
+  src: url("../fonts/leroymerlinserif-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class$="--lmscript"] {
+  font-family: LeroyMerlinScript;
+  font-weight: 400;
+}
+
 a.lienPrivacy {
   font-weight: bold;
 }

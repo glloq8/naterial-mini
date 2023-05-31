@@ -7,7 +7,34 @@
 /*---------------------------------------------------------------------------------------------------*/
 
 :root {
-  --font-base: sans-serif;
+  --typeHeaderPrimary: Helvetica;
+  --typeHeaderFallback: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  --typeHeaderSize: 36px;
+  --typeHeaderWeight: 400;
+  --typeHeaderLineHeight: 1.2;
+  --typeHeaderSpacing: 0.0em;
+  --typeBasePrimary: 'leroy_merlin_sansregular';
+  --typeBasePrimarySemi: 'leroy_merlin_sanssemibold';
+  --typeBaseTitle: 'leroy_merlin_serifregular';
+  --typeBaseFallback: 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif;
+  --typeBaseSize: 16px;
+  --typeBaseWeight: 400;
+  --typeBaseSpacing: 0.025em;
+  --typeBaseLineHeight: 1.5;
+  --colorSmallImageBg: #ffffff;
+  --colorSmallImageBgDark: #f7f7f7;
+  --colorLargeImageBg: #e7e7e7;
+  --colorLargeImageBgLight: #ffffff;
+  --colorRed: #EA6062;
+  --iconWeight: 3px;
+  --iconLinecaps: miter;
+  --buttonRadius: 3px;
+  --btnPadding: 11px 25px;
+  --roundness: 0px;
+  --gridThickness: 0px;
+  --productTileMargin: 5%;
+  --collectionTileMargin: 17%;
+  --swatchSize: 30px;
 }
 
 /*---------------------------------------------------------------------------------------------------*/
