@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#b6c1b3">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/theme.min.js"></script>
+    <script type="text/javascript" src="js/yannick.js"></script>
+    <script type="text/javascript" src="js/Antoine.js"></script>
+    <script type="text/javascript" src="js/slick-carousel.js"></script>
+
+    <link rel="shortcut icon" href="images/Logo_Favicon_Naterial_32x32.png" type="image/png" />
+  </head>
+
+  <body>
+    <div class="toolbar">
+      <div class="page-width">
+        <div class="toolbar__content">
+          <div class="toolbar__item toolbar__item--announcements">
+            <div class="announcement-bar" style="calc(100% - 200px)">
+              <div class="slideshow-wrapper">
+                <button type="button" class="visually-hidden slideshow__pause" data-id="toolbar" aria-live="polite">
+                  <span class="slideshow__pause-stop">
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-pause"
+                      viewBox="0 0 10 13"
+                    >
+                      <g fill="#000" fill-rule="evenodd"><path d="M0 0h3v13H0zM7 0h3v13H7z"></path></g>
+                    </svg>
+                    <span class="icon__fallback-text">Pause Diashow</span>
+                  </span>
+                  <span class="slideshow__pause-play">
+                    <svg
+                      aria-hidden="true"
+                      focusable="false"
+                      role="presentation"
+                      class="icon icon-play"
+                      viewBox="18.24 17.35 24.52 28.3"
+                    >
+                      <path fill="#323232" d="M22.1 19.151v25.5l20.4-13.489-20.4-12.011z"></path>
+                    </svg>
+                    <span class="icon__fallback-text">Diashow abspielen</span>
+                  </span>
+                </button>
+
+                <div
+                  id="AnnouncementSlider"
+                  class="announcement-slider flickity-enabled is-fade"
+                  data-block-count="1"
+                  tabindex="0"
+                >
+                  <div class="flickity-viewport" style="height: 24px; touch-action: pan-y">
+                    <div class="flickity-slider" style="left: 0px; transform: translateX(0%)">
+                      <div
+                        id="AnnouncementSlide-4aff1a01-d872-4f84-9700-f5508f06d5a6"
+                        class="slideshow__slide announcement-slider__slide is-selected"
+                        data-index="0"
+                        style="position: absolute; left: 0%"
+                      >
+                        <div class="announcement-slider__content">
+                          <div class="medium-up--hide">
+                            <p>Kostenloser Versand und Retoure innerhalb von 14 Tagen</p>
+                          </div>
+                          <div class="small--hide">
+                            <p>Kostenloser Versand und Retoure innerhalb von 14 Tagen</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    class="flickity-button flickity-prev-next-button flickity-previous"
+                    type="button"
+                    disabled=""
+                    aria-label="Previous"
+                  >
+                    <svg class="flickity-button-icon" viewBox="0 0 100 100">
+                      <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path>
+                    </svg></button
+                  ><button
+                    class="flickity-button flickity-prev-next-button flickity-next"
+                    type="button"
+                    disabled=""
+                    aria-label="Next"
+                  >
+                    <svg class="flickity-button-icon" viewBox="0 0 100 100">
+                      <path
+                        d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z"
+                        class="arrow"
+                        transform="translate(100, 100) rotate(180) "
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="header-help">
+            <a href=""> Help center </a>
+          </div> -->
+            <div class="header-swicth-language">
+              <select
+                class=""
+                id="select_lang_mobile"
+                onchange="this.options[this.selectedIndex].value &amp;&amp; (window.location = this.options[this.selectedIndex].value);"
+              ></select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shopify-section header-section">
+      <style>
+        .site-nav__link {
+          font-size: 15px;
+        }
+
+        .site-header,
+        .site-header__element--sub {
+          box-shadow: 0 0 25px rgb(0 0 0 / 10%);
+        }
+      </style>
+
+      <div data-section-id="header" data-section-type="header">
+        <div id="HeaderWrapper" class="header-wrapper header-wrapper--init">
+          <header
+            id="SiteHeader"
+            class="site-header site-header--heading-style"
+            data-sticky="true"
+            data-overlay="false"
+          >
+            <div class="site-header__element site-header__element--top">
+              <div class="page-width">
+                <div class="header-layout" data-layout="below" data-nav="below" data-logo-align="left">
+                  <div class="header-item header-item--compress-nav small--hide">
+                    <button type="button" class="site-nav__link site-nav__link--icon site-nav__compress-menu">
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        role="presentation"
+                        class="icon icon-hamburger"
+                        viewBox="0 0 64 64"
+                      >
+                        <path class="cls-1" d="M7 15h51">.</path>
+                        <path class="cls-1" d="M7 32h43">.</path>
+                        <path class="cls-1" d="M7 49h51">.</path>
+                      </svg>
+                      <span class="icon__fallback-text">Seitennavigation</span>
+                    </button>
+                  </div>
+                  <div class="header-item header-item--logo">
+                    <button
+                      type="button"
+                      aria-controls="MobileNav"
+                      class="site-nav__link site-nav__link--icon medium-up--hide mobile-nav-trigger"
+                    >
+                      <input
+                        type="image"
+                        id="image"
+                        class="open-trigger"
+                        alt="Login"
+                        src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/Colormenu2.png?v=1638896166"
+                      />
+                      <input
+                        type="image"
+                        id="image"
+                        class="close-trigger"
+                        alt="Login"
+                        src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/close-cross.svg"
+                      />
+                      <span class="icon__fallback-text">Seitennavigation</span></button
+                    ><style data-shopify="">
+                      .header-item--logo,
+                      [data-layout="left-center"] .header-item--logo,
+                      [data-layout="left-center"] .header-item--icons {
+                        flex: 0 1 140px;
+                      }
+
+                      @media only screen and (min-width: 769px) {
+                        .header-item--logo,
+                        [data-layout="left-center"] .header-item--logo,
+                        [data-layout="left-center"] .header-item--icons {
+                          flex: 0 0 400px;
+                        }
+                      }
+
+                      .site-header__logo a {
+                        width: 140px;
+                      }
+                      .is-light .site-header__logo .logo--inverted {
+                        width: 140px;
+                      }
+                      @media only screen and (min-width: 769px) {
+                        .site-header__logo a {
+                          width: 400px;
+                        }
+
+                        .is-light .site-header__logo .logo--inverted {
+                          width: 400px;
+                        }
+                      }
+                    </style>
+                    <h1 class="site-header__logo">
+                      <span class="visually-hidden">Naterial.de</span>
+
+                      <a href="/" class="site-header__logo-link">
+                        <img
+                          class="small--hide"
+                          src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Naterial_Carmen_400x.png?v=1678088695"
+                          srcset="
+                            //cdn.shopify.com/s/files/1/0603/2677/2912/files/Naterial_Carmen_400x.png?v=1678088695    1x,
+                            //cdn.shopify.com/s/files/1/0603/2677/2912/files/Naterial_Carmen_400x@2x.png?v=1678088695 2x
+                          "
+                          alt="Naterial.de"
+                        />
+                        <img
+                          class="medium-up--hide"
+                          src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Naterial_Carmen_140x.png?v=1678088695"
+                          srcset="
+                            //cdn.shopify.com/s/files/1/0603/2677/2912/files/Naterial_Carmen_140x.png?v=1678088695    1x,
+                            //cdn.shopify.com/s/files/1/0603/2677/2912/files/Naterial_Carmen_140x@2x.png?v=1678088695 2x
+                          "
+                          alt="Naterial.de"
+                        />
+                      </a>
+                    </h1>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="site-header__element site-header__element--sub" data-type="nav">
+              <div class="page-width">
+                <ul class="site-nav site-navigation site-navigation--below small--hide" role="navigation">
+                  <li class="site-nav__item site-nav__expanded-item">
+                    <a href="/pages/uber-naterial" class="site-nav__link site-nav__link--underline">Sobre Naterial</a>
+                  </li>
+                  <li class="site-nav__item site-nav__expanded-item site-nav--has-dropdown" aria-haspopup="true">
+                    <a href="#" class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown">Nuestras colecciones</a>
+                    <div class="site-nav__dropdown">
+                      <div class="page-width">
+                        <ul class="site-nav__dropdown-animate site-nav__dropdown-list text-left">
+                          <li class="">
+                            <a
+                              href="/collections/gartentische"
+                              class="site-nav__dropdown-link site-nav__dropdown-link--second-level"
+                            >
+                              Colección Solaris
+                            </a>
+                          </li>
+                          <li class="">
+                            <a
+                              href="/collections/gartenstuhle"
+                              class="site-nav__dropdown-link site-nav__dropdown-link--second-level"
+                            >
+                              Colección Medena
+                            </a>
+                          </li>
+                          <li class="">
+                            <a
+                              href="/collections/gartenstuhle-mit-armlehnen"
+                              class="site-nav__dropdown-link site-nav__dropdown-link--second-level"
+                            >
+                              Colección Odyssea II
+                            </a>
+                          </li>
+                          <li class="">
+                            <a
+                              href="/collections/esstischgarnituren"
+                              class="site-nav__dropdown-link site-nav__dropdown-link--second-level"
+                            >
+                              Colección San Diego
+                            </a>
+                          </li>
+                          <li class="">
+                            <a
+                              href="/collections/esstischgarnituren"
+                              class="site-nav__dropdown-link site-nav__dropdown-link--second-level"
+                            >
+                              Colección Menorca
+                            </a>
+                          </li>
+                          <li class="">
+                            <a
+                              href="/collections/esstischgarnituren"
+                              class="site-nav__dropdown-link site-nav__dropdown-link--second-level"
+                            >
+                              Colección Oris
+                            </a>
+                          </li>
+                          <li class="">
+                            <a
+                              href="/collections/esstischgarnituren"
+                              class="site-nav__dropdown-link site-nav__dropdown-link--second-level"
+                            >
+                              Colección Solis
+                            </a>
+                          </li>
+                          <li class="">
+                            <a
+                              href="/collections/esstischgarnituren"
+                              class="site-nav__dropdown-link site-nav__dropdown-link--second-level"
+                            >
+                              Colección Idaho
+                            </a>
+                          </li>
+                        </ul>
+
+                        <div class="menu_picture_large only-large">
+                          <a href="">
+                            <img
+                              class="img_link"
+                              src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Para_Comer_y_recibir_Grande_8837b904-e13d-4f1b-ac3d-06370a2bc6f8_1024x1024.jpg?v=1678088941"
+                            />
+                            <div class="header__link_picture">
+                              Siehe Produkte
+                              <img
+                                src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                              />
+                            </div>
+                          </a>
+                        </div>
+                        <div class="menu_picture_small only-large">
+                          <a href="">
+                            <img
+                              class="img_link"
+                              src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_eat_and_host_short_DE_e11a6bb5-fce3-4acf-a02d-fd33e2b858cd_1024x1024.jpg?v=1678290296"
+                            />
+                            <div class="header__link_picture">
+                              Siehe Produkte
+                              <img
+                                src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                              />
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="site-nav__item site-nav__expanded-item site-nav--has-dropdown" aria-haspopup="true">
+                    <a href="#" class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown">Nuestros estilos</a>
+                    <div class="site-nav__dropdown">
+                      <div class="page-width">
+                        <ul class="site-nav__dropdown-animate site-nav__dropdown-list text-left">
+                          <li class="">
+                            <a
+                              href="/collections/gartentische"
+                              class="site-nav__dropdown-link site-nav__dropdown-link--second-level"
+                            >
+                              Contemporáneo
+                            </a>
+                          </li>
+                          <li class="">
+                            <a
+                              href="/collections/gartenstuhle"
+                              class="site-nav__dropdown-link site-nav__dropdown-link--second-level"
+                            >
+                              Natural
+                            </a>
+                          </li>
+                          <li class="">
+                            <a
+                              href="/collections/gartenstuhle-mit-armlehnen"
+                              class="site-nav__dropdown-link site-nav__dropdown-link--second-level"
+                            >
+                              Tradicional
+                            </a>
+                          </li>
+                        </ul>
+
+                        <div class="menu_picture_large only-large">
+                          <a href="">
+                            <img
+                              class="img_link"
+                              src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Para_Comer_y_recibir_Grande_8837b904-e13d-4f1b-ac3d-06370a2bc6f8_1024x1024.jpg?v=1678088941"
+                            />
+                            <div class="header__link_picture">
+                              Siehe Produkte
+                              <img
+                                src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                              />
+                            </div>
+                          </a>
+                        </div>
+                        <div class="menu_picture_small only-large">
+                          <a href="">
+                            <img
+                              class="img_link"
+                              src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_eat_and_host_short_DE_e11a6bb5-fce3-4acf-a02d-fd33e2b858cd_1024x1024.jpg?v=1678290296"
+                            />
+                            <div class="header__link_picture">
+                              Siehe Produkte
+                              <img
+                                src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                              />
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="site-nav__item site-nav__expanded-item site-nav--has-dropdown" aria-haspopup="true">
+                    <a href="#" class="site-nav__link site-nav__link--underline site-nav__link--has-dropdown">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="page-width site-header__drawers">
+              <div class="site-header__drawers-container">
+                <div class="site-header__drawer site-header__cart" id="HeaderCart">
+                  <div class="site-header__drawer-animate is-empty">
+                    <form action="/cart" method="post" novalidate="" data-location="header" class="cart__drawer-form">
+                      <div class="site-nav__close-cart">
+                        <button
+                          type="button"
+                          id="fermeturePanier"
+                          class="site-nav__link site-nav__link--icon js-close-header-cart"
+                        >
+                          X
+                        </button>
+                      </div>
+                      <div class="cart__scrollable">
+                        <div data-products="">
+                          <div class="cart__items" data-count="0" data-cart-subtotal="0"></div>
+                        </div>
+                      </div>
+
+                      <div class="cart__footer">
+                        <div class="cart__item-sub cart__item-row cart__item--subtotal">
+                          <div>Zwischensumme</div>
+                          <div data-subtotal="">0,00€</div>
+                        </div>
+
+                        <div data-discounts="">
+                          <div class="cart__discounts text-right hide">
+                            <div></div>
+                          </div>
+                        </div>
+
+                        <div class="cart__item-row cart__checkout-wrapper payment-buttons">
+                          <button type="submit" name="checkout" data-terms-required="false" class="btn cart__checkout">
+                            Zur Kasse
+                          </button>
+                        </div>
+
+                        <div class="cart__item-row--footer text-center">
+                          <small>Rabattcodes, Versandkosten und Steuern werden bei der Bezahlung berechnet.</small>
+                        </div>
+                      </div>
+                    </form>
+
+                    <div class="site-header__cart-empty">Ihr Einkaufswagen ist im Moment leer.</div>
+                  </div>
+                </div>
+
+                <div class="site-header__drawer site-header__mobile-nav medium-up--hide" id="MobileNav">
+                  <div class="site-header__drawer-animate">
+                    <div class="slide-nav__wrapper" data-level="1">
+                      <ul class="slide-nav">
+                        <li class="slide-nav__item">
+                          <a href="/pages/uber-naterial" class="slide-nav__link slide-nav__link-new"
+                            ><span>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                fill="none"
+                                style="width: 25px; margin-bottom: -5px; margin-right: 10px"
+                              >
+                                <g clip-path="url(#a)">
+                                  <path
+                                    fill="#EA6062"
+                                    d="M17.3005.124023H5.42488V2.67389H17.3005c2.2202 0 4.0257 1.80553 4.0257 4.02568v9.32583H18.576v-4.0247c0-.2271-.0119-.4502-.0336-.6713-.3376-3.31195-3.1422-5.90427-6.541-5.90427H5.42587v6.57557c0 3.6259 2.94966 6.5745 6.57553 6.5745h4.0257v2.7503H2.67462V5.42513H.124756V23.8764H18.575v-5.3002h5.3001V6.70056c0-3.62588-2.9497-6.575548-6.5755-6.575548l.0009-.000989ZM12.0004 16.0254c-2.21914 0-4.02566-1.8056-4.02566-4.0247V7.975h4.02566c2.2192 0 4.0257 1.80652 4.0257 4.0257v4.0247h-4.0257Z"
+                                  ></path>
+                                </g>
+                                <defs>
+                                  <clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"></path></clipPath>
+                                </defs>
+                              </svg>
+                              Sobre Naterial
+                            </span>
+                          </a>
+                        </li>
+                        <li class="slide-nav__item">
+                          <button
+                            type="button"
+                            class="slide-nav__button js-toggle-submenu"
+                            data-target="essen-und-bewirten2"
+                          >
+                            <span class="slide-nav__link"
+                              ><span>
+                                <img
+                                  class="logo_img_collection"
+                                  src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/table.svg?v=1649767189"
+                                />
+                                <!--<img src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/Color.png?v=1639037441" style="width:25px; margin-bottom:-5px; margin-right:10px" />-->
+
+                                Nuestras colecciones</span
+                              >
+
+                              <span class="icon__fallback-text">Menü maximieren</span>
+                            </span>
+                          </button>
+
+                          <ul class="slide-nav__dropdown" data-parent="essen-und-bewirten2" data-level="2">
+                            <li class="slide-nav__item">
+                              <button type="button" class="slide-nav__button js-toggle-submenu">
+                                <span class="slide-nav__link slide-nav__link--back">
+                                  <img
+                                    src="//cdn.shopify.com/s/files/1/0558/6629/4445/t/9/assets/arrow_next.svg?v=5783516265191383676"
+                                    style="transform: rotate(180deg)"
+                                  />
+
+                                  &nbsp; Zurück
+                                </span>
+                                <span class="title_menu_mobile_collection">Essen und bewirten</span><br /><br />
+                              </button>
+                            </li>
+
+                            <li class="slide-nav__item">
+                              <a href="/collections/gartentische" class="slide-nav__link">
+                                <span>Gartentische</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/gartenstuhle" class="slide-nav__link">
+                                <span>Gartenstühle</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/gartenstuhle-mit-armlehnen" class="slide-nav__link">
+                                <span>Gartenstühle mit Armlehnen</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/esstischgarnituren" class="slide-nav__link">
+                                <span>Esstischgarnituren</span>
+                              </a>
+                            </li>
+                            <div class="sub-menu-mobile" style="padding: 20px">
+                              <div class="menu_picture_large" style="padding-bottom: 10px">
+                                <a href="">
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/Para_Comer_y_recibir_Grande_8837b904-e13d-4f1b-ac3d-06370a2bc6f8_1024x1024.jpg?v=1678088941"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="menu_picture_small">
+                                <a href="">
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_eat_and_host_short_DE_e11a6bb5-fce3-4acf-a02d-fd33e2b858cd_1024x1024.jpg?v=1678290296"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div style="clear: both"></div>
+                          </ul>
+                        </li>
+                        <li class="slide-nav__item">
+                          <button type="button" class="slide-nav__button js-toggle-submenu" data-target="sich-erholen3">
+                            <span class="slide-nav__link"
+                              ><span>
+                                <img
+                                  class="logo_img_collection"
+                                  src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/fauteuil.svg?v=1649767189"
+                                />
+                                <!--<img src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/Group_21.png?v=1639037860" style="width:25px; margin-bottom:-5px; margin-right:10px" />-->
+
+                                Nuestros estilos</span
+                              >
+
+                              <span class="icon__fallback-text">Menü maximieren</span>
+                            </span>
+                          </button>
+
+                          <ul class="slide-nav__dropdown" data-parent="sich-erholen3" data-level="2">
+                            <li class="slide-nav__item">
+                              <button type="button" class="slide-nav__button js-toggle-submenu">
+                                <span class="slide-nav__link slide-nav__link--back">
+                                  <img
+                                    src="//cdn.shopify.com/s/files/1/0558/6629/4445/t/9/assets/arrow_next.svg?v=5783516265191383676"
+                                    style="transform: rotate(180deg)"
+                                  />
+
+                                  &nbsp; Zurück
+                                </span>
+                                <span class="title_menu_mobile_collection">Sich erholen</span><br /><br />
+                              </button>
+                            </li>
+
+                            <li class="slide-nav__item">
+                              <a href="/collections/sessel-und-hocker" class="slide-nav__link">
+                                <span>Sessel und Hocker</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/loungegarnituren" class="slide-nav__link">
+                                <span>Loungegarnituren</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/sonnenliegen" class="slide-nav__link">
+                                <span>Sonnenliegen</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/gartenschaukeln-sitzgelegenheiten" class="slide-nav__link">
+                                <span>Gartenschaukeln &amp; Sitzgelegenheiten</span>
+                              </a>
+                            </li>
+                            <div class="sub-menu-mobile" style="padding: 20px">
+                              <div class="menu_picture_large" style="padding-bottom: 10px">
+                                <a
+                                  href="/products/set-5p-naterial-medena-sofa-3p-2-ac-1-table-60x100-wicker-alu-natural"
+                                >
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_lounge_large_DE_85d4f010-ff94-4d81-a17e-46a26274a2c9_1024x1024.jpg?v=1678088941"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="menu_picture_small">
+                                <a
+                                  href="/products/swingchair-3p-naterial-odyssea-sliding-roof-steel-spunpoly220g-dgrey"
+                                >
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_lounge_DE_aaa6f18e-8f7c-470d-9773-6a2f15b3102e_1024x1024.jpg?v=1678290413"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div style="clear: both"></div>
+                          </ul>
+                        </li>
+                        <li class="slide-nav__item">
+                          <button
+                            type="button"
+                            class="slide-nav__button js-toggle-submenu"
+                            data-target="schatten-spenden4"
+                          >
+                            <span class="slide-nav__link"
+                              ><span>
+                                <img
+                                  class="logo_img_collection"
+                                  src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/transat.svg?v=1649767189"
+                                />
+                                <!--<img src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/Group_19.png?v=1639037860" style="width:25px; margin-bottom:-5px; margin-right:10px" />-->
+
+                                Contacto</span
+                              >
+
+                              <span class="icon__fallback-text">Menü maximieren</span>
+                            </span>
+                          </button>
+
+                          <ul class="slide-nav__dropdown" data-parent="schatten-spenden4" data-level="2">
+                            <li class="slide-nav__item">
+                              <button type="button" class="slide-nav__button js-toggle-submenu">
+                                <span class="slide-nav__link slide-nav__link--back">
+                                  <img
+                                    src="//cdn.shopify.com/s/files/1/0558/6629/4445/t/9/assets/arrow_next.svg?v=5783516265191383676"
+                                    style="transform: rotate(180deg)"
+                                  />
+
+                                  &nbsp; Zurück
+                                </span>
+                                <span class="title_menu_mobile_collection">Schatten spenden</span><br /><br />
+                              </button>
+                            </li>
+
+                            <li class="slide-nav__item">
+                              <a href="/collections/pergolen" class="slide-nav__link">
+                                <span>Pergolen</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/sonnenschirme" class="slide-nav__link">
+                                <span>Sonnenschirme</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/pavillons" class="slide-nav__link">
+                                <span>Pavillons</span>
+                              </a>
+                            </li>
+                            <li class="slide-nav__item">
+                              <a href="/collections/sonnensegel" class="slide-nav__link">
+                                <span>Sonnensegel</span>
+                              </a>
+                            </li>
+                            <div class="sub-menu-mobile" style="padding: 20px">
+                              <div class="menu_picture_large" style="padding-bottom: 10px">
+                                <a
+                                  href="/products/pergola-naterial-persea-easy-full-alu-modular-roof-320x360-dark-grey"
+                                >
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_shade_large_DE_1024x1024.jpg?v=1646149972"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                              <div class="menu_picture_small">
+                                <a href="/products/side-umb-naterial-avea-alu-360-hexa-d290-200g-dark-grey-shadow">
+                                  <img
+                                    class="img_link"
+                                    src="//cdn.shopify.com/s/files/1/0603/2677/2912/files/To_shade_short_DE_1024x1024.jpg?v=1648715375"
+                                    style="opacity: 0.5"
+                                  />
+                                  <div class="header__link_picture">
+                                    Siehe Produkte
+                                    <img
+                                      src="//cdn.shopify.com/s/files/1/0603/2677/2912/t/11/assets/arrow_next.svg?v=147196761568930484961675985198"
+                                    />
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                            <div style="clear: both"></div>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- <div id="MobileNavFooter"></div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+
+    <main class="main-content" id="MainContent">
+        
+      <div class="page-width page-content">
+
+        <div id="cms-about">
+
+        <div class="styles">
+          <h2>Affirmed styles</h2>
+          <p class="intro">At Naterial we are always looking for simplicity to define uncluttered, tidy and easy-going spaces. But also, with the desire of refined and personalized decoration. We provide an answer to different atmospheres to match different outdoor spaces, landscapes and architectures.</p>
+          <div class="bloc blue">
+            <h3>Contemporary</h3>
+            <p class="photo"><img src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/Brand_Page_Visual_Contemporary_Desktop.jpg?v=1679432895" alt="A contemporary style based on graphic lines and material like wood, stone and aluminium"></p>
+            <div class="content-text">
+              <p class="text">The contemporary style highlights graphic and minimal materials (wood, stone and coated aluminium). The metal is associated to soft fabrics, wood and concrete effects. The colour mood is not only natural but incorporates many green and grey shades (olive greens, dark and light greys). It can be enriched with colourful tones to bring life and vitality. This style is characterized by functionality and clean lines to simplify your life. Geometrical structures are very important to create and compose the general aesthetic for volumes and shapes.</p>
+              <!--
+                <p class="cta"><a href="#" class="btn">Call to action</a></p>
+              -->
+          </div>
+        </div>
+        <div class="bloc green">
+          <h3>Natural</h3>
+          <p class="photo"><img src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/Brand_Page_Visual_Natural_Desktop.jpg?v=1679432895" alt=""></p>
+          <div class="content-text">
+          <p class="text">The natural style is treated with a sensual minimalism. It is a soft mood with vegetal influences using a pastel shades colour palette of warm earthy neutrals. Especially with atonally beige, green tones and slightly greyish. Different materials (wood, metals, fabrics, rattan, natural fibers and ceramics) can be used but always with a touch of softness to bring an easy atmosphere. Shapes, hand-waving and finishings bring the balance between the rhythm and the harmony. There is a desire for simplicity and peacefulness with no-fuss and no glitz.</p>
+          <!--
+            <p class="cta"><a href="#" class="btn">Call to action</a></p>
+          -->
+          </div>
+        </div>
+        <div class="bloc grey">
+          <h3>Traditional</h3>
+          <p class="photo"><img src="https://cdn.shopify.com/s/files/1/0558/6629/4445/files/Brand_Page_Visual_Traditional_Desktop.jpg?v=1679432895" alt="A traditional style based on classical decoration with material like metal and hand-weaved rattan"></p>
+          <div class="content-text">
+          <p class="text">The traditional style expresses the juxtaposition of modernity and historicity to create an atmosphere of authenticity. It reflects the desire to furnish a classical decoration with simplicity and elegance to bring an impression of revival. This style mixes materials like marble, metal and hand-weaved rattan. The colours experiments pastel shades and grey tones (from the white to the dark grey). All of it to create a sophisticated mood.</p>
+          <!--<p class="cta"><a href="#" class="btn">Call to action</a></p>-->
+          </div>
+        </div>
+
+      </div>
+
+      </div>
+      
+            </main>
+
+    <div id="shopify-section-1631649139e935d06e" class="shopify-section">
+      <div class="columns-pictos">
+          <div class="page-width">
+              <div class="grid grid--uniform grid--flush-bottom label">
+                  <div class="grid__item medium-up--one-quarter text-center">
+                      <div style="margin: 0 auto; max-width: 50px;">
+                          <div class="" style="height: 0; padding-bottom: 97.9591836734694%;">
+                              <img
+                                  class="lazyautosizes lazyloaded"
+                                  data-widths="[180, 360, 540, 720, 900, 1080]"
+                                  data-aspectratio="1.0208333333333333"
+                                  data-sizes="auto"
+                                  alt=""
+                                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                  data-srcset="//cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_180x.png?v=1678272693 180w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_360x.png?v=1678272693 360w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_540x.png?v=1678272693 540w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_720x.png?v=1678272693 720w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_900x.png?v=1678272693 900w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_1080x.png?v=1678272693 1080w"
+                                  sizes="50px"
+                                  srcset="
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_180x.png?v=1678272693   180w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_360x.png?v=1678272693   360w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_540x.png?v=1678272693   540w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_720x.png?v=1678272693   720w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_900x.png?v=1678272693   900w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/secure_payment_d11346a6-f402-4574-8850-88367afa381c_1080x.png?v=1678272693 1080w
+                                  "
+                              />
+                          </div>
+                      </div>
+                      <div class="title rte--block">Sichere Bezahlung</div>
+                  </div>
+                  <div class="grid__item medium-up--one-quarter text-center">
+                      <div style="margin: 0 auto; max-width: 50px;">
+                          <div class="" style="height: 0; padding-bottom: 100%;">
+                              <img
+                                  class="lazyautosizes lazyloaded"
+                                  data-widths="[180, 360, 540, 720, 900, 1080]"
+                                  data-aspectratio="1.0"
+                                  data-sizes="auto"
+                                  alt=""
+                                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                  data-srcset="//cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_180x.png?v=1678272693 180w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_360x.png?v=1678272693 360w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_540x.png?v=1678272693 540w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_720x.png?v=1678272693 720w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_900x.png?v=1678272693 900w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_1080x.png?v=1678272693 1080w"
+                                  sizes="50px"
+                                  srcset="
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_180x.png?v=1678272693   180w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_360x.png?v=1678272693   360w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_540x.png?v=1678272693   540w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_720x.png?v=1678272693   720w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_900x.png?v=1678272693   900w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/delivery_4c008d7a-1cc1-4318-b084-11da09fe796e_1080x.png?v=1678272693 1080w
+                                  "
+                              />
+                          </div>
+                      </div>
+                      <div class="title rte--block">Kostenlose Lieferung</div>
+                  </div>
+                  <div class="grid__item medium-up--one-quarter text-center">
+                      <div style="margin: 0 auto; max-width: 50px;">
+                          <div class="" style="height: 0; padding-bottom: 100%;">
+                              <img
+                                  class="lazyautosizes lazyloaded"
+                                  data-widths="[180, 360, 540, 720, 900, 1080]"
+                                  data-aspectratio="1.0"
+                                  data-sizes="auto"
+                                  alt=""
+                                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                  data-srcset="//cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_180x.png?v=1678272693 180w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_360x.png?v=1678272693 360w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_540x.png?v=1678272693 540w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_720x.png?v=1678272693 720w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_900x.png?v=1678272693 900w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_1080x.png?v=1678272693 1080w"
+                                  sizes="50px"
+                                  srcset="
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_180x.png?v=1678272693   180w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_360x.png?v=1678272693   360w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_540x.png?v=1678272693   540w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_720x.png?v=1678272693   720w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_900x.png?v=1678272693   900w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/in_shop_22161e23-45a4-430e-a216-ee376bff7cf8_1080x.png?v=1678272693 1080w
+                                  "
+                              />
+                          </div>
+                      </div>
+                      <div class="title rte--block">Kostenlose Rücksendung</div>
+                  </div>
+                  <div class="grid__item medium-up--one-quarter text-center">
+                      <div style="margin: 0 auto; max-width: 50px;">
+                          <div class="" style="height: 0; padding-bottom: 97.9591836734694%;">
+                              <img
+                                  class="lazyautosizes lazyloaded"
+                                  data-widths="[180, 360, 540, 720, 900, 1080]"
+                                  data-aspectratio="1.0208333333333333"
+                                  data-sizes="auto"
+                                  alt=""
+                                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC"
+                                  data-srcset="//cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_180x.png?v=1678272694 180w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_360x.png?v=1678272694 360w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_540x.png?v=1678272694 540w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_720x.png?v=1678272694 720w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_900x.png?v=1678272694 900w, //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_1080x.png?v=1678272694 1080w"
+                                  sizes="50px"
+                                  srcset="
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_180x.png?v=1678272694   180w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_360x.png?v=1678272694   360w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_540x.png?v=1678272694   540w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_720x.png?v=1678272694   720w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_900x.png?v=1678272694   900w,
+                                      //cdn.shopify.com/s/files/1/0603/2677/2912/files/after_sales_53f1768a-1e4f-4569-9832-d3ab26b27e2d_1080x.png?v=1678272694 1080w
+                                  "
+                              />
+                          </div>
+                      </div>
+                      <div class="title rte--block">Kundenservice</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
