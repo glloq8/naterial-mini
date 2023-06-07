@@ -231,11 +231,15 @@ body.template-page .main-content > .page-width {
 
 #cms-about .styles h2 {
   margin-bottom: 40px;
+  text-align: center;
 }
 
 #cms-about .styles .intro {
   line-height: 21px;
   margin-bottom: 40px;
+  text-align: center;
+  max-width: 50%;
+  margin-inline: auto;
 }
 
 #cms-about .styles .bloc {
@@ -297,6 +301,18 @@ body.template-page .main-content > .page-width {
 #cms-about .styles .bloc.grey .content-text .cta .btn {
   color: #343334;
   border-color: #343334;
+}
+
+#cms-about .banner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 40px;
+}
+
+#cms-about .banner img {
+  height: 600px;
+  width: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=/s/files/1/0603/2677/2912/t/11/assets/cms.css.map?v=142917989741360823751675985198 */
@@ -414,6 +430,23 @@ body.template-page .main-content > .page-width {
   #cms-about .styles .intro {
     padding-left: 24px;
     padding-right: 24px;
+  }
+
+  #cms-about .styles h2 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  #cms-about .styles .intro {
+    text-align: center;
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  #cms-about .banner {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 40px;
   }
 }
 
