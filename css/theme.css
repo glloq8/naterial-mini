@@ -6338,6 +6338,26 @@ input[type=image] {
   pointer-events: none;
 }
 
+.collection-hero .collection-hero__content .section-header--flush .section-header__title {
+  height: auto;
+  margin-bottom: 32px;
+}
+
+.collection-hero .collection-hero__content .section-header--flush {
+  justify-content: center;
+}
+
+.collection-hero .collection-hero__content .section-header--flush .slider-action span {
+  background: var(--colorRed);
+  color: #fff;
+  border: 2px solid var(--colorRed);
+}
+
+.collection-hero .collection-hero__content .section-header--flush .slider-action:hover span {
+  background: #fff;
+  color: var(--colorRed);
+}
+
 .collection-hero__image {
   transform: scale(1.15);
   opacity: 0;
