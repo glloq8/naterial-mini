@@ -11542,6 +11542,12 @@ body.template-page .main-content > .page-width {
   justify-content: center;
 }
 
+#cms-about .styles .bloc .content-text .cta a {
+  background: transparent;
+  color: #000;
+  border-color: #000;
+}
+
 #cms-about .styles .bloc.blue .content-text {
   background-color: #d6dde5;
 }
