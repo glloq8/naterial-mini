@@ -3014,7 +3014,7 @@ symbol.icon:not(.icon--full-color) rect {
 
 .footer__social {
   margin: 0;
-  margin-left: -1%;
+  line-height: 0;
 }
 
 form + .footer__social {
@@ -3023,11 +3023,12 @@ form + .footer__social {
 
 .footer__social li {
   display: inline-block;
-  margin: 0 8px 8px 0;
+  margin: 0;
 }
 
 .footer__social a {
   display: block;
+  height: 48px;
 }
 
 .footer__social .icon {
@@ -6354,8 +6355,7 @@ input[type=image] {
 }
 
 .collection-grid {
-  margin-bottom: 60px;
-  margin-bottom: var(--indexSectionPadding);
+  margin-block: var(--indexSectionPadding);
 }
 
 .collection-grid__wrapper.unload {
@@ -6766,7 +6766,6 @@ select .variant-input {
 
 .grid-product__image-wrap {
   position: relative;
-  margin: var(--productTileMargin) var(--productTileMargin);
 }
 
 [data-view=list] .grid-product__image-wrap {
@@ -9925,15 +9924,19 @@ html[dir=rtl] .product-single__meta .rte {
 }
 
 .columns-pictos {
+  display: grid;
+  place-content: center;
   background-color: #F5F1F0;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  height: 76px;
 }
 
 .columns-pictos .label {
   color: #505050;
   font-size: 18px !important;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
 }
 
 .columns-pictos .title {
