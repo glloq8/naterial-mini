@@ -14257,6 +14257,11 @@ div.slideshow__slide.slideshow__slide--16316185069457ca50-0.is-selected > div.he
     display: none;
   }
 
+  .columns-pictos {
+    height: auto;
+    padding-block: 50px;
+  }
+
   .columns-pictos .grid__item {
     float: left;
     min-height: 1px;
@@ -14265,10 +14270,15 @@ div.slideshow__slide.slideshow__slide--16316185069457ca50-0.is-selected > div.he
   .columns-pictos .label {
     flex-direction: column;
     justify-content: center;
+    gap: 40px;
+  }
+
+  .columns-pictos .label::after {
+    display: none;
   }
 
   .columns-pictos > .page-width {
-    padding: 0;
+    width: 100%;
   }
 
   .section-image-text.no-padding {

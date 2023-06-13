@@ -15880,6 +15880,11 @@ body.template-page .main-content > .page-width {
     display: none;
   }
 
+  .columns-pictos {
+    height: auto;
+    padding-block: 50px;
+  }
+
   .columns-pictos .grid__item {
     float: left;
     min-height: 1px;
@@ -15888,10 +15893,15 @@ body.template-page .main-content > .page-width {
   .columns-pictos .label {
     flex-direction: column;
     justify-content: center;
+    gap: 40px;
+  }
+
+  .columns-pictos .label::after {
+    display: none;
   }
 
   .columns-pictos > .page-width {
-    padding: 0;
+    width: 100%;
   }
 
   .section-image-text.no-padding {

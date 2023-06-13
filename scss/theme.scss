@@ -12569,7 +12569,10 @@ html[dir=rtl] .product-single__meta .rte{
     
 
 @media only screen and (max-width:768px){
-  
+  .columns-pictos {
+    height: auto;
+    padding-block: 50px;
+  }
   	  .columns-pictos .grid__item{
         float:left;
         min-height:1px
@@ -12578,10 +12581,15 @@ html[dir=rtl] .product-single__meta .rte{
   .columns-pictos .label{
     flex-direction: column;
     justify-content:center;
+    gap: 40px;
+  }
+
+  .columns-pictos .label::after {
+    display: none;
   }
 
   .columns-pictos > .page-width{
-    padding:0;
+    width: 100%;
   }    
 }
     
