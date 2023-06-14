@@ -1,10 +1,6 @@
 
 $(document).ready(function(){
-  const MobileToggle = document.querySelector('.mobile-nav-trigger')
-  MobileToggle.addEventListener('click', function() {
-    this.classList.toggle('is-active')
-    document.getElementById('MobileNav').classList.toggle('is-active')
-  })
+  
   
   // Appel des sliders photo sur la fiche produit  
   $('.block_metafield_block_4 .pictures_block .pictures').slick({
