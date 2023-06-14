@@ -14852,6 +14852,14 @@ div.slideshow__slide.slideshow__slide--16316185069457ca50-0.is-selected > div.he
   .section-header--flush .section-header__title {
     margin-top: 15% !important;
   }
+
+  .collection-hero .section-header--flush .section-header__title {
+    margin-block: 0 16px !important;
+  }
+
+  .collection-hero .section-header--flush .slider-action {
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 480px) {

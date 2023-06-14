@@ -802,6 +802,12 @@ img#pictoOurNatureInspiration {
   .section-header--flush .section-header__title {
     margin-top: 15%!important;
   }
+  .collection-hero .section-header--flush .section-header__title {
+    margin-block: 0 16px !important;
+  }
+  .collection-hero .section-header--flush .slider-action {
+    text-align: center;
+  }
 }
 
 :root{
